@@ -32,7 +32,7 @@ const AboutUs = () => {
             </Button>
           </div>
         </div>
-        <div className=" md:block flex  ">
+        <div className=" md:block flex hidden ">
           <Image src="/about-limmo.png" alt="alo" width={972} height={41} />
         </div>
       </div>
