@@ -82,7 +82,7 @@ export function NavBar() {
           <NavList />
         </div>
 
-        <div className="flex items-center  md:block">
+        <div className="flex items-center  md:block hidden">
           <div className="flex gap-5 justify-center items-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
