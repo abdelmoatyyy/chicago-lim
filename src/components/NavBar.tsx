@@ -17,18 +17,16 @@ interface NavItemPropsType {
 
 function NavItem({ label }: NavItemPropsType) {
   return (
-    <Link href="#">
-      <Typography
-        as="li"
-        color="white"
-        className="p-1 font-medium hover:text-amber-400"
-        placeholder={undefined}
-        onPointerEnterCapture={undefined}
-        onPointerLeaveCapture={undefined}
-      >
-        {label}
-      </Typography>
-    </Link>
+    <Typography
+      as="li"
+      color="white"
+      className="p-1 font-medium hover:text-amber-400"
+      placeholder={undefined}
+      onPointerEnterCapture={undefined}
+      onPointerLeaveCapture={undefined}
+    >
+      {label}
+    </Typography>
   );
 }
 
@@ -36,14 +34,12 @@ function NavList() {
   return (
     <ul className="mb-4 mt-2 flex flex-col gap-3 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-8 ">
       <Link href="#home">
-        {" "}
         <NavItem label="Home" />
       </Link>
       <Link href="#about-us">
         <NavItem label="About Us" />{" "}
       </Link>
       <Link href="#services">
-        {" "}
         <NavItem label="Services" />
       </Link>
       <Link href="#fleet">
