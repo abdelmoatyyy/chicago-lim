@@ -134,7 +134,7 @@ const CarCard = ({
           className="mb-5 px-8 py-3 min-w-[120px] text-center text-black font-bold bg-[#CD9900] rounded-xl hover:shadow-lg transition-shadow duration-300"
           href={`/cars/${id}`}
         >
-          Know More
+          Read More
         </Link>
       </div>
     </div>
