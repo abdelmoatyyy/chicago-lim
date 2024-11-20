@@ -15,8 +15,8 @@ const AboutUs = () => {
               Satisfaction
             </h1>
             <p>
-              Nullam sed ultricies erat, nec euismod metus. Morbi porttitor
-              sapien vitae leo scelerisque. Nullam sed ultricies erat.
+              Luxury cars combine elegance and comfort, offering an unmatched
+              driving experience for every journey.
             </p>
           </div>
           <div className="w-full mt-6">

@@ -21,8 +21,8 @@ const Footer = () => {
           </Link>
           <div className="mt-6 lg:max-w-sm">
             <p className="text-sm text-black">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam.
+              Luxury cars combine elegance and comfort, offering an unmatched
+              driving experience for every journey.
             </p>
             <p className="mt-4 text-sm text-black">
               Eaque ipsa quae ab illo inventore veritatis et quasi architecto
@@ -37,7 +37,7 @@ const Footer = () => {
           <div className="flex">
             <p className="mr-1 text-black">Phone:</p>
             <Link
-              href="tel:850-123-5021"
+              href="tel:312-645-0505"
               aria-label="Our phone"
               title="Our phone"
               className="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800"
@@ -48,7 +48,7 @@ const Footer = () => {
           <div className="flex">
             <p className="mr-1 text-black">Email:</p>
             <Link
-              href="mailto:info@lorem.mail"
+              href="mailto:info@chicagotranslimo.com"
               aria-label="Our email"
               title="Our email"
               className="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800"
@@ -66,7 +66,7 @@ const Footer = () => {
               title="Our address"
               className="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800"
             >
-              312 Lovely Street, NY
+              7339 N Keystone Ave Lincolnwood IL 60712
             </Link>
           </div>
         </div>
@@ -102,8 +102,7 @@ const Footer = () => {
             </Link>
           </div>
           <p className="mt-4 text-sm text-black">
-            Bacon ipsum dolor amet short ribs pig sausage prosciutto chicken
-            spare ribs salami.
+            Follow Us Everywhere To Stay Updated With Us And Our Services
           </p>
         </div>
       </div>

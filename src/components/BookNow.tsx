@@ -146,20 +146,19 @@ const BookNow = () => {
             </li>
           </ul>
         </div>
-        <div className="md:w-1/2 w-full ">
+        <div className="md:w-1/2 w-full">
           <iframe
-            src="https://book.mylimobiz.com/v4/chicagotrans/widget/quickReservation?redirectUrl=https://chicagointerstateshuttle.com/book-now/"
-            tabIndex={0}
+            src="https://book.mylimobiz.com/v4/chicagotrans"
+            width="100%"
+            height="80vh"
             frameBorder={0}
-            scrolling="no"
+            scrolling="auto"
             allow="geolocation"
             className="ores4iframe"
             style={{
               minWidth: "100%",
-              overflow: "hidden",
-              height: 817,
-              color: "black",
-              borderRadius: 10,
+              height: "80vh", // Adjust to fit viewport height
+              maxHeight: "900px", // Limit height if needed
             }}
             id="iFrameResizer0"
           />

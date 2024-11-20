@@ -21,7 +21,7 @@ const OurServices = () => {
           <div className="grid max-w-4xl lg:max-w-6xl grid-cols-1 mx-auto mt-8 text-center gap-y-4 sm:gap-x-8 sm:grid-cols-2 lg:grid-cols-3 sm:mt-12 lg:mt-20 sm:text-left">
             <div className="relative">
               <div className="absolute -inset-1">
-                <div className="w-full h-full rotate-180 opacity-30 blur-lg filter bg-gradient-to-r from-yellow-400 via-pink-500 to-green-600"></div>
+                <div className="w-full h-full rotate-180 opacity-30 blur-lg filter bg-gradient-to-r from-yellow-400 via-[#CD9900] to-green-600"></div>
               </div>
               <div className="relative overflow-hidden bg-[#FFFAF0] shadow-md rounded-xl h-full">
                 <div className="p-9">
@@ -63,7 +63,7 @@ const OurServices = () => {
             </div>
             <div className="relative">
               <div className="absolute -inset-1">
-                <div className="w-full h-full rotate-180 opacity-30 blur-lg filter bg-gradient-to-r from-yellow-400 via-pink-500 to-green-600"></div>
+                <div className="w-full h-full rotate-180 opacity-30 blur-lg filter bg-gradient-to-r from-yellow-400 via-[#CD9900] to-green-600"></div>
               </div>
               <div className="relative overflow-hidden bg-[#FFFAF0] shadow-md rounded-xl h-full">
                 <div className="p-9">
@@ -107,7 +107,7 @@ const OurServices = () => {
             </div>
             <div className="relative">
               <div className="absolute -inset-1">
-                <div className="w-full h-full rotate-180 opacity-30 blur-lg filter bg-gradient-to-r from-yellow-400 via-pink-500 to-green-600"></div>
+                <div className="w-full h-full rotate-180 opacity-30 blur-lg filter bg-gradient-to-r from-yellow-400 via-[#CD9900] to-green-600"></div>
               </div>
               <div className="relative overflow-hidden bg-[#FFFAF0] shadow-md rounded-xl h-full">
                 <div className="p-9">

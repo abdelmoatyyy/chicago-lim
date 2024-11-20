@@ -44,10 +44,7 @@ const ContactUs = () => {
                       Our Address
                     </h3>
                     <p className="text-gray-900 dark:text-slate-400">
-                      1230 Maecenas Street Donec Road
-                    </p>
-                    <p className="text-gray-900 dark:text-slate-400">
-                      New York, EEUU
+                      7339 N Keystone Ave Lincolnwood IL 60712
                     </p>
                   </div>
                 </li>
