@@ -6,6 +6,7 @@ import {
   Mail,
   Linkedin,
   MessageCircle,
+  Instagram,
 } from "lucide-react";
 import Link from "next/link";
 
@@ -124,16 +125,16 @@ const ContactUs = () => {
 
               {/* LinkedIn */}
               <Link
-                href="https://www.linkedin.com/company/your-company"
+                href="https://www.instagram.com/chicagotranslimousine/profilecard/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group flex flex-col items-center justify-center rounded-lg bg-[#FFFAF0] p-8 shadow-lg transition-all hover:shadow-xl dark:bg-slate-700"
               >
-                <div className="mb-4 rounded-full bg-[#0A66C2] p-4 text-white">
-                  <Linkedin className="h-8 w-8" />
+                <div className="mb-4 rounded-full bg-[#c13584] p-4 text-white">
+                  <Instagram className="h-8 w-8" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-                  LinkedIn
+                  Instagram
                 </h3>
                 <p className="mt-2 text-center text-gray-600 dark:text-slate-400">
                   Connect with us
