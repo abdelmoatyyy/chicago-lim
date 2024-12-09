@@ -103,7 +103,7 @@ const CarCard = ({
         <div className="flex justify-center px-5 my-5">
           {/* Price */}
           <div className="text-[#CD9900] font-bold text-2xl mb-4">
-            {hour} $ <br />
+            $ {hour} <br />
             <span className="text-gray-600 font-medium text-sm">
               / per hour
             </span>
@@ -113,7 +113,7 @@ const CarCard = ({
         <div className="flex justify-center  my-5">
           {/* Price */}
           <div className="text-[#CD9900] font-bold text-2xl mb-4">
-            {airport}$ <br />
+            $ {airport} <br />
             <span className="text-gray-600 font-medium text-sm">
               / From Airport
             </span>

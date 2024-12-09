@@ -33,19 +33,19 @@ function NavItem({ label }: NavItemPropsType) {
 function NavList() {
   return (
     <ul className="mb-4 mt-2 flex flex-col gap-3 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-8 ">
-      <Link href="#home">
+      <Link href="/#home">
         <NavItem label="Home" />
       </Link>
-      <Link href="#about-us">
+      <Link href="about-us">
         <NavItem label="About Us" />{" "}
       </Link>
-      <Link href="#services">
+      <Link href="/#services">
         <NavItem label="Services" />
       </Link>
-      <Link href="#fleet">
+      <Link href="/#fleet">
         <NavItem label="Our Fleet" />
       </Link>
-      <Link href="#contact-us">
+      <Link href="/#contact-us">
         <NavItem label="Contact Us" />
       </Link>
     </ul>

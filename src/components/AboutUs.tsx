@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { Button } from "@/app/MTailwind";
+import Link from "next/link";
 const AboutUs = () => {
   return (
     <>
@@ -27,14 +28,6 @@ const AboutUs = () => {
               timeliness. We are committed to providing the best experience in
               business and leisure travel.
             </p>
-            <p>
-              Every client we service, whether for business meetings, airport
-              transportation, tours, weddings, a night out, or special events;
-              will receive our concentrated individual attention. We are a
-              technology-based company that allows us to keep you, corporate
-              administrators, or the travel agent “in the know” with SMS/Email
-              Notifications on every ride.
-            </p>
           </div>
           <div className="w-full mt-6">
             <Button
@@ -45,7 +38,7 @@ const AboutUs = () => {
               onPointerEnterCapture={undefined}
               onPointerLeaveCapture={undefined}
             >
-              Read More
+              <Link href="about-us">Read More</Link>
             </Button>
           </div>
         </div>
