@@ -174,7 +174,7 @@ export default function AirportServicePage() {
                     href="https://www.flychicago.com/ohare/home/pages/default.aspx"
                     className="inline-block bg-amber-600 text-white px-8 py-3 rounded-full hover:bg-amber-700 transition-colors duration-300 text-lg font-semibold shadow-lg"
                   >
-                    Midway Airport
+                    O'Hare Airport
                   </Link>
                 </div>
                 <div className="pt-6 border-t border-gray-200">
@@ -182,7 +182,7 @@ export default function AirportServicePage() {
                     href="https://www.flychicago.com/midway/home/pages/default.aspx"
                     className="inline-block bg-amber-600 text-white px-8 py-3 rounded-full hover:bg-amber-700 transition-colors duration-300 text-lg font-semibold shadow-lg"
                   >
-                    O'Hare Airport
+                    Midway Airport
                   </Link>
                 </div>
                 <div className="pt-6 border-t border-gray-200">
