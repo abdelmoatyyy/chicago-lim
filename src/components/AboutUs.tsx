@@ -6,17 +6,34 @@ const AboutUs = () => {
     <>
       <div
         id="about-us"
-        className="flex flex-row  gap-15 w-full my-24 justify-center h-full px-16"
+        className="flex flex-row  gap-18 w-full my-24 justify-center h-full px-16 items-center"
       >
-        <div>
-          <div className="flex flex-col space-y-8 ">
+        <div className="w-full md:w-1/2">
+          <div className="flex flex-col space-y-4 ">
             <h1 className="font-['Cinzel'] text-4xl md:text-6xl ">
-              <span className="text-[#CD9900]">Luxury Cars</span> for Maximum
-              Satisfaction
+              <span className="text-[#CD9900]">Who We Are?</span>
             </h1>
+            <p className="font-[Roboto] text-md">
+              Chicago Trans Limousine & Shuttle has been family-owned and
+              operated since 2003, our company has over decades of experience in
+              the private luxury black car, limousine, and ground transportation
+              industries. We started in Chicago and have grown our reach to
+              Iowa, Indiana, Wisconsin, and Michigan over the years!
+            </p>
             <p>
-              Luxury cars combine elegance and comfort, offering an unmatched
-              driving experience for every journey.
+              Being a leader in the livery industry has solidified our
+              understanding of the basic needs of every passenger, corporate
+              administrator, and travel agent: safety, security, privacy, and
+              timeliness. We are committed to providing the best experience in
+              business and leisure travel.
+            </p>
+            <p>
+              Every client we service, whether for business meetings, airport
+              transportation, tours, weddings, a night out, or special events;
+              will receive our concentrated individual attention. We are a
+              technology-based company that allows us to keep you, corporate
+              administrators, or the travel agent “in the know” with SMS/Email
+              Notifications on every ride.
             </p>
           </div>
           <div className="w-full mt-6">
@@ -33,7 +50,7 @@ const AboutUs = () => {
           </div>
         </div>
         <div className=" md:block flex hidden ">
-          <Image src="/about-limmo.png" alt="alo" width={972} height={41} />
+          <Image src="/about-limmo.png" alt="alo" width={700} height={41} />
         </div>
       </div>
       <section className=" hidden w-full md:flex justify-center items-center dark:bg-gray-900 p-8">
@@ -87,14 +104,6 @@ const AboutUs = () => {
             <div className="flex items-center lg:justify-center">
               <Image
                 src="/Lincoln_logo.svg"
-                alt="cadilac"
-                width={120}
-                height={50}
-              />
-            </div>
-            <div className="flex items-center lg:justify-center">
-              <Image
-                src="/lexus-svgrepo-com.svg"
                 alt="cadilac"
                 width={120}
                 height={50}

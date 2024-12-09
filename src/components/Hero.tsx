@@ -65,7 +65,7 @@ const Hero = () => {
                     onPointerEnterCapture={undefined}
                     onPointerLeaveCapture={undefined}
                   >
-                    Know More
+                    Read More
                   </Button>
                 </Link>
               </div>
@@ -113,7 +113,7 @@ const Hero = () => {
                     onPointerEnterCapture={undefined}
                     onPointerLeaveCapture={undefined}
                   >
-                    Know More
+                    Read More
                   </Button>
                 </Link>
               </div>
@@ -161,7 +161,7 @@ const Hero = () => {
                     onPointerEnterCapture={undefined}
                     onPointerLeaveCapture={undefined}
                   >
-                    Know More
+                    Read More
                   </Button>
                 </Link>
               </div>

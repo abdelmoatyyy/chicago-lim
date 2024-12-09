@@ -99,7 +99,7 @@ const CarCard = ({
         </div>
       </div>
 
-      <div className="flex justify-between items-center ">
+      <div className="flex justify-around items-center ">
         <div className="flex justify-center px-5 my-5">
           {/* Price */}
           <div className="text-[#CD9900] font-bold text-2xl mb-4">
@@ -107,13 +107,6 @@ const CarCard = ({
             <span className="text-gray-600 font-medium text-sm">
               / per hour
             </span>
-          </div>
-        </div>
-        <div className="flex justify-center px-5 my-5">
-          {/* Price */}
-          <div className="text-[#CD9900] font-bold text-2xl mb-4">
-            {day} $ <br />
-            <span className="text-gray-600 font-medium text-sm">/ per Day</span>
           </div>
         </div>
 
