@@ -11,7 +11,7 @@ const carData: Record<any, any> = {
     perHourRate: "$95 / Hour (2 Hrs Min)",
     perDayRate: "$900 / Day ",
     airportTransfer: "$115-$550 (Depends on destination)",
-    passengers: "3 Passengers",
+    passengers: "6 Passengers",
     interior: "Leather Interior",
     features: [
       "Heated Seats",

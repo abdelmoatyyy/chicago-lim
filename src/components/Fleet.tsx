@@ -19,7 +19,7 @@ const Fleet = () => {
       hour: 95,
       day: 900,
       airport: "115 - 550",
-      seats: 3,
+      seats: 6,
     },
     {
       id: 2,
