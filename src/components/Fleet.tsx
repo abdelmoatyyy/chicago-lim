@@ -12,8 +12,8 @@ const Fleet = () => {
   const data = [
     {
       id: 1,
-      title: "Sedan",
-      imageUrl: "/sedan1.webp",
+      title: "Lincoln Aviator",
+      imageUrl: "/aviator.avif",
       descreption:
         "tinted windows, a great sound system, and room for all your luggage,",
       hour: 95,

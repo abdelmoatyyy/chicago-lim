@@ -36,7 +36,7 @@ function NavList() {
       <Link href="/#home">
         <NavItem label="Home" />
       </Link>
-      <Link href="about-us">
+      <Link href="/about-us">
         <NavItem label="About Us" />{" "}
       </Link>
       <Link href="/#services">

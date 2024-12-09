@@ -1,7 +1,13 @@
 const carData: Record<any, any> = {
   1: {
-    name: "Luxury Sedan",
-    images: ["/sedan1.webp", "/sedan11.avif", "/sedan12.webp"],
+    name: "Lincoln Aviator",
+    images: [
+      "/av4.avif",
+      "/av5.avif",
+      "/aviator.avif",
+      "/av2.avif",
+      "/av3.avif",
+    ],
     perHourRate: "$95 / Hour (2 Hrs Min)",
     perDayRate: "$900 / Day ",
     airportTransfer: "$115-$550 (Depends on destination)",
@@ -112,6 +118,8 @@ const carData: Record<any, any> = {
   5: {
     name: "Cadillac Escalade SUV",
     images: [
+      "/cd.jpg",
+      "/cd2.jpg",
       "/cadilac.png",
       "/cadilac-slide-4.jpg",
       "/cadillac-suv-slide-3.avif",

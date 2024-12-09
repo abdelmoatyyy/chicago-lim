@@ -1,6 +1,27 @@
 import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import Image from "next/image";
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import Link from "next/link";
 
 const CompanyStory: React.FC = () => {
+  const airportServiceImages = [
+    "/WhatsApp Image 2024-12-05 at 4.58.30 AM (1).jpeg",
+    "/WhatsApp Image 2024-12-05 at 4.58.30 AM (4).jpeg",
+    "/WhatsApp Image 2024-12-05 at 4.58.30 AM (5).jpeg",
+    "/WhatsApp Image 2024-12-05 at 4.58.29 AM (2).jpeg",
+    "/WhatsApp Image 2024-12-05 at 4.58.30 AM (6).jpeg",
+    "/WhatsApp Image 2024-12-05 at 4.58.30 AM.jpeg",
+    "/WhatsApp Image 2024-12-05 at 4.58.30 AM (7).jpeg",
+    "/WhatsApp Image 2024-12-05 at 4.58.30 AM (10).jpeg",
+    "/WhatsApp Image 2024-12-05 at 4.58.30 AM (3).jpeg",
+    "/WhatsApp Image 2024-12-05 at 4.58.29 AM (7).jpeg",
+  ];
+
   return (
     <section className="container mx-auto px-4 py-16">
       <div className="grid md:grid-cols-2 gap-10 items-center">
@@ -33,14 +54,30 @@ const CompanyStory: React.FC = () => {
             </p>
           </div>
         </div>
-        <div className="hidden md:block">
-          <div className=" rounded-lg overflow-hidden shadow-lg">
-            <img
-              src="/WhatsApp Image 2024-12-05 at 4.58.30 AM (1).jpeg"
-              alt="Chicago Trans Limousine"
-              className="w-full h-full object-cover"
-            />
-          </div>
+        <div className="w-full rounded-2xl overflow-hidden shadow-2xl">
+          <Swiper
+            modules={[Navigation, Pagination, Autoplay]}
+            spaceBetween={10}
+            slidesPerView={1}
+            pagination={{ clickable: true }}
+            autoplay={{
+              delay: 3500,
+              disableOnInteraction: false,
+            }}
+            className="h-[500px] md:h-[600px] w-full"
+          >
+            {airportServiceImages.map((img, index) => (
+              <SwiperSlide key={index}>
+                <Image
+                  src={img}
+                  alt={`Airport Service ${index + 1}`}
+                  fill
+                  className="object-cover w-full h-full"
+                  priority={index === 0}
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
       </div>
     </section>
