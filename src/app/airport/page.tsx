@@ -10,17 +10,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import Link from "next/link";
 
-const airportServiceImages = [
-  "/WhatsApp Image 2024-12-05 at 4.58.30 AM (4).jpeg",
-  "/WhatsApp Image 2024-12-05 at 4.58.30 AM (5).jpeg",
-  "/WhatsApp Image 2024-12-05 at 4.58.29 AM (2).jpeg",
-  "/WhatsApp Image 2024-12-05 at 4.58.30 AM (6).jpeg",
-  "/WhatsApp Image 2024-12-05 at 4.58.30 AM.jpeg",
-  "/WhatsApp Image 2024-12-05 at 4.58.30 AM (7).jpeg",
-  "/WhatsApp Image 2024-12-05 at 4.58.30 AM (10).jpeg",
-  "/WhatsApp Image 2024-12-05 at 4.58.30 AM (3).jpeg",
-  "/WhatsApp Image 2024-12-05 at 4.58.29 AM (7).jpeg",
-];
+const airportServiceImages = ["/ohare.jpg", "/ohare2.jpg", "/midway.jpg"];
 
 export default function AirportServicePage() {
   return (
@@ -178,14 +168,31 @@ export default function AirportServicePage() {
                   </p>
                 </div>
               </div>
-
-              <div className="pt-6 border-t border-gray-200">
-                <Link
-                  href="/#book-now"
-                  className="inline-block bg-amber-600 text-white px-8 py-3 rounded-full hover:bg-amber-700 transition-colors duration-300 text-lg font-semibold shadow-lg"
-                >
-                  Book Your Airport Service
-                </Link>
+              <div className="flex items-center gap-8 flex-col md:flex-row">
+                <div className="pt-6 border-t border-gray-200">
+                  <Link
+                    href="https://www.flychicago.com/ohare/home/pages/default.aspx"
+                    className="inline-block bg-amber-600 text-white px-8 py-3 rounded-full hover:bg-amber-700 transition-colors duration-300 text-lg font-semibold shadow-lg"
+                  >
+                    Midway Airport
+                  </Link>
+                </div>
+                <div className="pt-6 border-t border-gray-200">
+                  <Link
+                    href="https://www.flychicago.com/midway/home/pages/default.aspx"
+                    className="inline-block bg-amber-600 text-white px-8 py-3 rounded-full hover:bg-amber-700 transition-colors duration-300 text-lg font-semibold shadow-lg"
+                  >
+                    O'Hare Airport
+                  </Link>
+                </div>
+                <div className="pt-6 border-t border-gray-200">
+                  <Link
+                    href="/#book-now"
+                    className="inline-block bg-amber-600 text-white px-8 py-3 rounded-full hover:bg-amber-700 transition-colors duration-300 text-lg font-semibold shadow-lg"
+                  >
+                    Book Your Airport Service
+                  </Link>
+                </div>
               </div>
             </div>
           </div>

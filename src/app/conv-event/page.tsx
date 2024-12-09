@@ -12,14 +12,6 @@ import Link from "next/link";
 
 const airportServiceImages = [
   "/WhatsApp Image 2024-12-05 at 4.58.30 AM (4).jpeg",
-  "/WhatsApp Image 2024-12-05 at 4.58.30 AM (5).jpeg",
-  "/WhatsApp Image 2024-12-05 at 4.58.29 AM (2).jpeg",
-  "/WhatsApp Image 2024-12-05 at 4.58.30 AM (6).jpeg",
-  "/WhatsApp Image 2024-12-05 at 4.58.30 AM.jpeg",
-  "/WhatsApp Image 2024-12-05 at 4.58.30 AM (7).jpeg",
-  "/WhatsApp Image 2024-12-05 at 4.58.30 AM (10).jpeg",
-  "/WhatsApp Image 2024-12-05 at 4.58.30 AM (3).jpeg",
-  "/WhatsApp Image 2024-12-05 at 4.58.29 AM (7).jpeg",
 ];
 
 export default function AirportServicePage() {

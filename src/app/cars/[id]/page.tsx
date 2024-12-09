@@ -83,7 +83,7 @@ export default function CarDetailsPage() {
         {/* Pricing and Details Section */}
         <div className="md:col-span-4 space-y-6">
           {/* Rates */}
-          <div className="bg-[#FFFAF0] rounded-xl shadow-md p-6 space-y-4">
+          {/* <div className="bg-[#FFFAF0] rounded-xl shadow-md p-6 space-y-4">
             <h2 className="text-2xl font-semibold mb-4">Rates</h2>
             <div className="space-y-3">
               <div className="flex items-center gap-3">
@@ -108,7 +108,7 @@ export default function CarDetailsPage() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
 
           {/* Quick Features */}
           <div className="bg-[#FFFAF0] rounded-xl shadow-md p-6">

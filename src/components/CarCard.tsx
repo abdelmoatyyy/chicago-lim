@@ -99,9 +99,9 @@ const CarCard = ({
         </div>
       </div>
 
-      <div className="flex justify-around items-center ">
+      {/* <div className="flex justify-around items-center ">
         <div className="flex justify-center px-5 my-5">
-          {/* Price */}
+          
           <div className="text-[#CD9900] font-bold text-2xl mb-4">
             $ {hour} <br />
             <span className="text-gray-600 font-medium text-sm">
@@ -111,7 +111,6 @@ const CarCard = ({
         </div>
 
         <div className="flex justify-center  my-5">
-          {/* Price */}
           <div className="text-[#CD9900] font-bold text-2xl mb-4">
             $ {airport} <br />
             <span className="text-gray-600 font-medium text-sm">
@@ -119,10 +118,11 @@ const CarCard = ({
             </span>
           </div>
         </div>
-      </div>
+        
+      </div> */}
 
       {/* Button */}
-      <div className="mb-2">
+      <div className="my-8">
         <Link
           className="mb-5 px-8 py-3 min-w-[120px] text-center text-black font-bold bg-[#CD9900] rounded-xl hover:shadow-lg transition-shadow duration-300"
           href={`/cars/${id}`}
