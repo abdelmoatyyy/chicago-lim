@@ -6,9 +6,7 @@
     "dev": "next dev",
     "build": "next build ",
     "start": "NODE_ENV=production node server.js",
-    "lint": "next lint",
-    "prepare": "tsc"
-    
+    "lint": "next lint"
   },
   "dependencies": {
     "@heroicons/react": "^2.1.5",
