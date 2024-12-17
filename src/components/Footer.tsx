@@ -25,10 +25,10 @@ const Footer = () => {
               Luxury cars combine elegance and comfort, offering an unmatched
               driving experience for every journey.
             </p>
-            <p className="mt-4 text-sm text-black">
-              Eaque ipsa quae ab illo inventore veritatis et quasi architecto
-              beatae vitae dicta sunt explicabo.
-            </p>
+            <div className="flex gap-6 mt-8">
+              <Image src="/foter.png" alt="footer" width={90} height={50} />
+              <Image src="/foter2.png" alt="footer" width={90} height={50} />
+            </div>
           </div>
         </div>
         <div className="space-y-2 text-sm">

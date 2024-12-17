@@ -10,9 +10,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import Link from "next/link";
 
-const airportServiceImages = [
-  "/WhatsApp Image 2024-12-05 at 4.58.30 AM (4).jpeg",
-];
+const airportServiceImages = ["/conv1.jpg", "/conv2.jpg", "/conv3.jpg"];
 
 export default function AirportServicePage() {
   return (

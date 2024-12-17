@@ -10,7 +10,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import Link from "next/link";
 
-const airportServiceImages = ["/night1.jpg"];
+const airportServiceImages = ["/no.jpg", "/no2.jpg", "/no3.jpg"];
 
 export default function AirportServicePage() {
   return (
