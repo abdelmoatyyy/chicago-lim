@@ -58,7 +58,7 @@ const Fleet = () => {
     {
       id: 5,
       title: "Cadillac Escalade suv",
-      imageUrl: "/cadilac.png",
+      imageUrl: "/download.png",
       descreption:
         "In all of our incredible Luxury SUVs, you’ll be sure to have a smooth ride to your destination.",
       hour: 145,

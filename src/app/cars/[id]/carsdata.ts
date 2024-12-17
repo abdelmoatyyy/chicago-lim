@@ -118,6 +118,7 @@ const carData: Record<any, any> = {
   5: {
     name: "Cadillac Escalade SUV",
     images: [
+      "/download.png",
       "/cd2.jpg",
       "/cad5.jpg",
       "/cadilac.png",
