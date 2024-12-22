@@ -125,7 +125,7 @@ export default function CarDetailsPage() {
             </div>
           </div>
 
-          <Link href="/book-now">
+          <Link href="/#book-now">
             <button className="w-full bg-[#CD9900] text-white py-4 rounded-xl font-semibold hover:bg-black transition-colors">
               Book Now
             </button>

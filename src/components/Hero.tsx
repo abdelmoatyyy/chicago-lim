@@ -44,7 +44,7 @@ const Hero = () => {
                 and style.
               </p>
               <div className="w-full flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 ">
-                <Link href="/book-now">
+                <Link href="/#book-now">
                   <Button
                     variant="gradient"
                     color="amber"
@@ -92,7 +92,7 @@ const Hero = () => {
                 you enjoy the journey.
               </p>
               <div className="flex w-full flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
-                <Link href="/book-now">
+                <Link href="/#book-now">
                   <Button
                     variant="gradient"
                     color="amber"
@@ -140,7 +140,7 @@ const Hero = () => {
                 choice.
               </p>
               <div className="flex w-full  flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
-                <Link href="/book-now">
+                <Link href="/#book-now">
                   <Button
                     variant="gradient"
                     color="amber"

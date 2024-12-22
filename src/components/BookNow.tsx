@@ -1,5 +1,9 @@
+"use client";
+import { Button } from "@material-tailwind/react";
+import Link from "next/link";
 import React from "react";
-
+import { Apple, AppleIcon } from "lucide-react";
+import Image from "next/image";
 const BookNow = () => {
   return (
     <div id="book-now" className="mt-12">
@@ -145,6 +149,21 @@ const BookNow = () => {
               </p>
             </li>
           </ul>
+          <div className="mt-16 w-full">
+            <Link
+              className="mb-5 mx-2  px-8 py-5 w-full text-md  md:text-xl   text-center text-black font-bold bg-[#CD9900] rounded-xl hover:shadow-lg transition-shadow duration-300"
+              href="https://book.mylimobiz.com/v4/(S(iyhgctydwk54dkz0us3bwvlp))/chicagotrans"
+            >
+              Using Iphone Or Safari ? Reserve Here{" "}
+              <Image
+                className="inline"
+                src="/apple.png"
+                alt="Apple Icon"
+                width={40}
+                height={40}
+              />
+            </Link>
+          </div>
         </div>
         <div className="md:w-1/2 w-full">
           <iframe
