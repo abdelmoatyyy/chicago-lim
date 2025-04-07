@@ -29,24 +29,25 @@ const ValueProposition: React.FC = () => {
   ];
 
   return (
-    <section className=" py-16">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">
+    <section className="py-16 relative">
+      <div className="absolute inset-0 bg-black opacity-50"></div>
+      <div className="relative container mx-auto px-4">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-yellow-400">
           Our Core Values
         </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {values.map((value, index) => (
             <div
               key={index}
-              className=" p-6 rounded-lg shadow-md text-center hover:shadow-xl transition-all duration-300"
+              className="p-6 rounded-lg shadow-md text-center bg-gray-900 hover:shadow-xl transition-all duration-300"
             >
               <div className="mb-4 flex justify-center">
-                <value.icon className="w-12 h-12 text-black" />
+                <value.icon className="w-12 h-12 text-yellow-400" />
               </div>
-              <h3 className="text-xl font-semibold mb-3 text-gray-900">
+              <h3 className="text-xl font-semibold mb-3 text-yellow-400">
                 {value.title}
               </h3>
-              <p className="text-gray-600">{value.description}</p>
+              <p className="text-gray-300">{value.description}</p>
             </div>
           ))}
         </div>

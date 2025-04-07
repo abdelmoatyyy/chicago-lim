@@ -32,7 +32,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative w-full px-4 md:px-12 pt-32 pb-4 min-h-screen font-sans">
+    <section className="relative min-h-screen flex items-center justify-center px-4 md:px-12 py-16 mt-12 font-sans">
       {/* Background Image with Overlay */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -43,7 +43,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-black/60" />{" "}
       {/* Dark overlay for better readability */}
       {/* Foreground Content */}
-      <div className="relative z-10 max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center space-y-12 md:space-y-0">
+      <div className="relative z-10 max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center space-y-8 md:space-y-0">
         {/* Left Content */}
         <div className="space-y-6 text-white">
           <Typography
@@ -63,22 +63,18 @@ export default function Hero() {
             . Exceptional comfort, punctuality, and professionalism—your premium
             ride awaits.
           </Typography>
-          <Link href="/book-now">
-            <Button
-              className="mt-2 bg-[#D4AF37] text-black rounded-xl shadow-md
-            hover:shadow-lg transition duration-300 text-base md:text-lg
-            font-semibold tracking-wide"
-              size="lg"
-            >
-              Book Now
-            </Button>
-          </Link>
+          <Button
+            size="lg"
+            className="bg-[#D4AF37] text-black rounded-xl shadow-md hover:shadow-lg transition duration-300 text-base md:text-lg font-semibold tracking-wide"
+          >
+            Explore Fleet
+          </Button>
         </div>
 
         {/* Right Reservation Form */}
-        <Card className="h-full bg-transparent p-8 md:p-24 mx-auto md:mx-0">
-          <CardBody className="h-full p-2">
-            <div className="w-full h-full overflow-hidden rounded-lg">
+        <Card className="bg-white/10 backdrop-blur-md border border-white/10 shadow-2xl p-4 mx-auto md:mx-0">
+          <CardBody className="p-2">
+            <div className="w-full h-[670px] overflow-hidden rounded-lg">
               <Link
                 href="https://book.mylimobiz.com/v4/chicagotrans"
                 data-ores-widget="quickres"

@@ -5,12 +5,14 @@ interface Props {
 const SectionHeader: React.FC<Props> = ({ heading }) => {
   return (
     <div className="flex justify-center items-center space-y-2 flex-col">
-      <h1 className="font-['Cinzel'] text-8xl md:text-6xl">{heading}</h1>
+      <h1 className="font-['Cinzel'] text-8xl md:text-6xl text-amber-300">
+        {heading}
+      </h1>
       <div className="inline-flex items-center justify-center w-full">
-        <hr className="w-64 h-1 my-2 bg-amber-200 border-0 rounded dark:bg-gray-700" />
-        <div className="absolute px-4 -translate-x-1/2 bg-white left-1/2 dark:bg-gray-900">
+        <hr className="w-64 h-1 my-2 bg-amber-300 border-0 rounded dark:bg-gray-700" />
+        <div className="absolute px-4 -translate-x-1/2 bg-gray-800 left-1/2 dark:bg-gray-800">
           <svg
-            className="w-4 h-4 text-black dark:text-gray-300"
+            className="w-4 h-4 text-amber-300 dark:text-amber-300"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"

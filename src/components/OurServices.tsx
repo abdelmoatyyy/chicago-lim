@@ -50,17 +50,22 @@ const OurServices = () => {
 
   return (
     <>
-      <section id="services" className="py-12 text-gray-100 sm:py-12 lg:py-16">
-        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+      <section
+        id="services"
+        className="relative py-8 text-gray-100 sm:py-12 lg:py-16"
+      >
+        {/* Overlay for the entire component */}
+        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div className="relative px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="mb-4">
             <div className="mb-6 max-w-3xl text-center sm:text-center md:mx-auto md:mb-12">
-              <p className="text-base font-semibold uppercase tracking-wide text-[#CD9900] dark:text-blue-200">
+              <p className="text-base font-semibold uppercase tracking-wide text-[#FFD700]">
                 Explore
               </p>
-              <h2 className="font-heading mb-4 font-bold tracking-tight text-gray-900 dark:text-white text-3xl sm:text-5xl">
+              <h2 className="font-heading mb-4 font-bold tracking-tight text-[#FFD700] text-3xl sm:text-5xl">
                 Our Services
               </h2>
-              <p className="mx-auto mt-4 max-w-3xl text-xl text-gray-600 dark:text-slate-400">
+              <p className="mx-auto mt-4 max-w-3xl text-xl text-gray-300">
                 We Offer A Wide Range Of Services To Help Satisfy Your Needs.
               </p>
             </div>
@@ -69,26 +74,27 @@ const OurServices = () => {
             {services.map((service, index) => (
               <div
                 key={index}
-                className="relative overflow-hidden bg-[#FFFAF0] shadow-md rounded-xl h-full flex flex-col"
+                className="relative overflow-hidden bg-[#0F0F0F] border border-[#FFD700] shadow-[0_4px_15px_0_rgba(255,215,0,0.5)] rounded-xl h-full flex flex-col"
               >
-                <div className="p-9">
+                <div className="relative p-9">
                   <Image
                     src={service.icon}
                     alt={service.title}
                     width={48}
                     height={48}
+                    className="filter invert brightness-150"
                   />
-                  <h3 className="mt-6 text-2xl font-bold text-gray-900 sm:mt-10">
+                  <h3 className="mt-6 text-2xl font-bold text-[#FFD700] sm:mt-10">
                     {service.title}
                   </h3>
-                  <p className="mt-6 text-base text-gray-600">
+                  <p className="mt-6 text-base text-gray-400">
                     {service.description}
                   </p>
                 </div>
-                <div className="p-9 mt-auto">
+                <div className="relative p-9 mt-auto">
                   <Link
                     href={service.link}
-                    className="bg-black text-white px-8 py-3 rounded-full hover:bg-amber-700 transition-colors duration-300 text-sm font-semibold shadow-lg"
+                    className="bg-[#FFD700] text-black px-8 py-3 rounded-full hover:bg-[#FFC107] transition-colors duration-300 text-sm font-semibold shadow-lg"
                   >
                     Read More
                   </Link>

@@ -126,24 +126,30 @@ const Fleet = () => {
 
   return (
     <>
-      <div id="fleet" className="my-10 h-full">
+      {/* Dark Overlay for the entire app */}
+      {/* <div className="fixed inset-0 bg-black bg-opacity-50 z-10 pointer-events-none"></div> */}
+      <div id="fleet" className=" h-full relative z-20">
         {/* Heading Section */}
-        <div className="mb-4">
-          <div className="mb-6 max-w-3xl text-center sm:text-center md:mx-auto md:mb-12">
-            <p className="text-base font-semibold uppercase tracking-wide text-[#CD9900] dark:text-blue-200">
+        <div className=" relative">
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-black bg-opacity-50 z-10"></div>
+          <div className="relative z-20 max-w-3xl text-center sm:text-center md:mx-auto ">
+            <p className="text-base font-semibold uppercase tracking-wide text-[#FFD700]">
               Explore
             </p>
-            <h2 className="font-heading mb-4 font-bold tracking-tight text-gray-900 dark:text-white text-3xl sm:text-5xl">
+            <h2 className="font-heading mb-4 font-bold tracking-tight text-gray-100 text-[#FFD700] text-3xl sm:text-5xl">
               Our Luxurious Fleet
             </h2>
-            <p className="mx-auto mt-4 max-w-3xl text-xl text-gray-600 dark:text-slate-400">
+            <p className="mx-auto mt-4 max-w-3xl text-xl text-white">
               Find The Perfect Vehicle For Your Needs
             </p>
           </div>
         </div>
 
         {/* Swiper Carousel */}
-        <div className="my-16">
+        <div className="relative ">
+          <div className=" absolute inset-0 bg-black bg-opacity-50 z-0"></div>
+
           <Swiper
             modules={[Parallax, Pagination, Navigation, Autoplay]}
             autoplay={{ delay: 3000 }}
@@ -156,12 +162,15 @@ const Fleet = () => {
               768: { slidesPerView: 2 },
               1024: { slidesPerView: 3 },
             }}
-            className="w-full max-w-6xl p-5"
-            style={{ paddingBottom: "3rem", paddingTop: "3rem" }} // Ensure space for visible slides
+            className=" w-full max-w-6xl p-5 relative z-30" // Ensure Swiper is in front of the overlay
+            style={{ paddingBottom: "3rem", paddingTop: "3rem" }}
           >
             {/* Each Slide */}
             {data.map((car, index) => (
-              <SwiperSlide key={index} className="flex justify-center">
+              <SwiperSlide
+                key={index}
+                className="flex justify-center relative z-50" // Changed to z-50 to bring CarCard in front of overlay
+              >
                 <CarCard
                   id={car.id}
                   title={car.title}
