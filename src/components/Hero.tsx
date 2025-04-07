@@ -54,7 +54,7 @@ export default function Hero() {
             ride awaits.
           </p>
           <Link href="/book-now">
-            <button className="mt-2 bg-[#D4AF37] text-black rounded-xl shadow-md hover:shadow-lg transition duration-300 text-base md:text-lg font-semibold tracking-wide">
+            <button className="mt-2 p-2 bg-[#D4AF37] text-black rounded-xl shadow-md hover:shadow-lg transition duration-300 text-base md:text-lg font-semibold tracking-wide">
               Book Now
             </button>
           </Link>
