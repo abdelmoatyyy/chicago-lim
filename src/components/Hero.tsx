@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Hero() {
   const [formData, setFormData] = useState({
@@ -25,18 +26,15 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative w-full px-4 md:px-12 pt-32 pb-4 min-h-screen font-sans">
-      {/* Background Image with Overlay */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: "url('/ChatGPT Image Apr 7, 2025, 12_11_10 PM.png')",
-        }}
+    <section className="relative w-full px-4 md:px-12 pt-32 pb-4 min-h-screen font-sans overflow-hidden">
+      <Image
+        fill
+        src="/ChatGPT Image Apr 7, 2025, 12_11_10 PM.png"
+        alt="Hero Image"
+        className="object-cover"
       />
-      <div className="absolute inset-0 bg-black/60" />{" "}
-      {/* Dark overlay for better readability */}
-      {/* Foreground Content */}
-      <div className="relative z-10 max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center space-y-12 md:space-y-0">
+      <div className="absolute inset-0 bg-black/60" /> {/* Dark overlay */}
+      <div className="relative z-10 max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 gap-16 items-center space-y-12 md:space-y-0">
         {/* Left Content */}
         <div className="space-y-6 text-white">
           <h1
@@ -54,7 +52,7 @@ export default function Hero() {
             ride awaits.
           </p>
           <Link href="/book-now">
-            <button className="mt-2 p-2 bg-[#D4AF37] text-black rounded-xl shadow-md hover:shadow-lg transition duration-300 text-base md:text-lg font-semibold tracking-wide">
+            <button className="mt-2 p-3 bg-[#D4AF37] text-black rounded-xl shadow-md hover:shadow-lg transition duration-300 text-base md:text-lg font-semibold tracking-wide">
               Book Now
             </button>
           </Link>
