@@ -19,7 +19,7 @@ const BookNow = () => {
             BOOk NOW
           </h2>
           <p className="mx-auto mt-4 max-w-3xl text-xl text-gray-300">
-            Book Your Ride Now
+            Book Your Ride With Us Now
           </p>
         </div>
 
