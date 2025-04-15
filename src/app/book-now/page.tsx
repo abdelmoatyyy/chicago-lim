@@ -6,7 +6,7 @@ import Script from "next/script";
 
 const BookNow = () => {
   return (
-    <div className="w-full h-[3000px] md:h-[1600px] flex flex-col pt-24">
+    <div className="w-full h-[5000px] md:h-[3000px] flex flex-col pt-24">
       {/* Header Section */}
       <div className="px-4 pt-8 max-w-3xl mx-auto text-center">
         <div className="my-6">
