@@ -75,12 +75,14 @@ export function NavBar() {
         onPointerLeaveCapture={undefined}
       >
         <div className="container mx-auto flex items-center justify-between text-white">
-          <Image
-            src="/chicagotransLOGO.png"
-            alt="logo"
-            width={120}
-            height={40}
-          />
+          <Link href="/">
+            <Image
+              src="/chicagotransLOGO.png"
+              alt="logo"
+              width={120}
+              height={40}
+            />
+          </Link>
           <div className="hidden lg:block">
             <NavList />
           </div>
