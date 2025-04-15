@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import Script from "next/script";
 
 export default function Hero() {
   const [formData, setFormData] = useState({
@@ -62,17 +63,40 @@ export default function Hero() {
         <div className="h-full bg-transparent p-8 md:p-24 mx-auto md:mx-0">
           <div className="h-full p-2">
             <div className="w-full h-full overflow-hidden rounded-lg">
-              <Link
+              <a
                 href="https://book.mylimobiz.com/v4/chicagotrans"
                 data-ores-widget="quickres"
                 data-ores-alias="chicagotrans"
-                data-redirect-url="https://book.mylimobiz.com/v4/chicagotrans"
-                className="block w-full h-full"
-              />
+                data-redirect-url="https://www.chicagotranslimo.com/book-now"
+                rel="noopener noreferrer"
+                id="chicagotrans-link"
+              ></a>
             </div>
           </div>
         </div>
       </div>
+      <Script id="safari-booking-fix" strategy="afterInteractive">
+        {`
+          document.addEventListener("DOMContentLoaded", function () {
+            var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+            if (isSafari) {
+              var link = document.getElementById("chicagotrans-link");
+              if (link) {
+                link.href = "https://book.mylimobiz.com/v4/chicagotrans";
+                link.textContent = "Book Now (Safari)";
+                link.removeAttribute("data-ores-widget");
+                link.removeAttribute("data-ores-alias");
+                link.removeAttribute("data-redirect-url");
+              }
+            }
+          });
+        `}
+      </Script>
+      {/* External Script */}
+      <Script
+        src="https://book.mylimobiz.com/v4/widgets/widget-loader.js"
+        strategy="afterInteractive"
+      />
     </section>
   );
 }

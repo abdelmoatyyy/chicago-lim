@@ -2,6 +2,7 @@
 import Link from "next/link";
 import React from "react";
 import Image from "next/image";
+import Script from "next/script";
 
 const BookNow = () => {
   return (
@@ -19,15 +20,37 @@ const BookNow = () => {
       </div>
       {/* Iframe Section */}
       <div className="flex-1">
-        <iframe
-          src="https://book.mylimobiz.com/v4/chicagotrans"
-          frameBorder={0}
-          scrolling="auto"
-          allow="geolocation"
-          className="ores4iframe w-full h-full"
-          id="iFrameResizer0"
-        />
+        <a
+          href="https://book.mylimobiz.com/v4/chicagotrans"
+          data-ores-widget="website"
+          data-ores-alias="chicagotrans"
+          rel="noopener noreferrer"
+          id="chicagotrans-widget-link"
+        ></a>
       </div>
+      <Script id="safari-widget-fix" strategy="afterInteractive">
+        {`
+          document.addEventListener("DOMContentLoaded", function () {
+            var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+
+            if (isSafari) {
+              var link = document.getElementById("chicagotrans-widget-link");
+              if (link) {
+                link.href = "https://book.mylimobiz.com/v4/chicagotrans";
+                link.textContent = "Book Now (Safari)";
+                link.removeAttribute("data-ores-widget");
+                link.removeAttribute("data-ores-alias");
+              }
+            }
+          });
+        `}
+      </Script>
+
+      {/* External Widget Loader */}
+      <Script
+        src="https://book.mylimobiz.com/v4/widgets/widget-loader.js"
+        strategy="afterInteractive"
+      />
     </div>
   );
 };
