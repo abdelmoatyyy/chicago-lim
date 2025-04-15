@@ -24,39 +24,41 @@ const CarCard = ({
   id,
 }: CarCardProps) => {
   return (
-    <div className=" p-4 bg-gray-900 border  border-[#FFD700] rounded-lg shadow-lg text-center transform transition duration-300 hover:scale-105 hover:shadow-2xl">
+    <div className="p-6 bg-gray-900 border border-[#FFD700] rounded-lg shadow-lg text-center transform transition duration-300 hover:scale-105 hover:shadow-2xl">
       {/* Car Image */}
-      <Image
-        src={imageUrl} // Replace with your image path
-        alt="Mercedes Benz E-Class"
-        width={300}
-        height={200}
-        className="mx-auto mb-4"
-      />
+      <div className="relative w-full h-48 mb-4 rounded-lg overflow-hidden">
+        <Image
+          src={imageUrl}
+          alt={title}
+          layout="fill"
+          objectFit="cover"
+          className="hover:opacity-90 transition-opacity duration-300"
+        />
+      </div>
 
       {/* Car Title */}
-      <h2 className="text-2xl font-semibold text-[#FFD700]">{title}</h2>
-      <p className="text-gray-300 text-sm mb-4">{description}</p>
+      <h2 className="text-2xl font-bold text-[#FFD700] mb-2">{title}</h2>
+      <p className="text-gray-300 text-sm mb-6 px-4">{description}</p>
 
       {/* Features */}
-      <div className="flex justify-center gap-8 mb-4 items-center">
-        <div className="text-center rounded-lg p-2 flex flex-col justify-center items-center gap-1">
+      <div className="flex justify-around mb-6 items-center">
+        <div className="text-center flex flex-col items-center gap-2">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 448 512"
-            className="w-6 h-6 text-[#FFD700]"
+            className="w-8 h-8 text-[#FFD700]"
           >
             <path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512l388.6 0c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304l-91.4 0z" />
           </svg>
           <p className="text-gray-300 text-sm font-bold">{seats} seats</p>
         </div>
-        <div className="text-center rounded-lg p-2 flex flex-col justify-center items-center gap-1">
+        <div className="text-center flex flex-col items-center gap-2">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             enableBackground="new 0 0 24 24"
             viewBox="0 0 24 24"
             id="heated-seat"
-            className="w-6 h-6 text-[#FFD700]"
+            className="w-8 h-8 text-[#FFD700]"
           >
             <g id="Layer_2">
               <path d="M20.6836 3.0513c-2.1934.7314-3.8252 2.5962-4.2598 4.8667l-.5264 2.7534c-.3662 1.9155.0049 3.8784 1.0679 5.563.2202.3496.5322.6323.9038.8184.3198.1597.6665.2393 1.0127.2393.3857 0 .7705-.0986 1.1172-.2949.6577-.3721 1.0845-1.0444 1.1426-1.7974l.8555-11.123c.0259-.334-.1177-.6587-.3818-.8647C21.3516 3.0063 21.0024 2.9468 20.6836 3.0513zM4.293 21.707C4.4805 21.8945 4.7349 22 5 22h13c.2651 0 .5195-.1055.707-.293l2-2c.2593-.2588.356-.6392.252-.9902-.1035-.3516-.3911-.6177-.7495-.6948l-9.8516-2.1104c-2.9297-.6284-5.9453.2612-8.0649 2.3813-.3906.3906-.3906 1.0234 0 1.4141L4.293 21.707zM7.5156 8.5c0-.8721-.4517-1.6646-1.1787-2.0684C6.2378 6.3765 6.1948 6.2466 6.1885 6.1431 6.1807 6.0308 6.2109 5.8823 6.3174 5.8032c.4438-.3286.5371-.9551.208-1.3984C6.1973 3.9604 5.5698 3.8667 5.127 4.1968 4.4878 4.6699 4.1387 5.4463 4.1924 6.2734c.0532.8149.4917 1.5273 1.1729 1.9063C5.4761 8.2412 5.5156 8.3857 5.5156 8.5S5.4761 8.7588 5.3652 8.8203c-.6812.3789-1.1196 1.0913-1.1729 1.9063-.0537.8271.2954 1.6035.9346 2.0767C5.3057 12.936 5.5146 13 5.7212 13c.3062 0 .6084-.1396.8042-.4048.3291-.4434.2358-1.0698-.208-1.3984-.1064-.0791-.1367-.2275-.1289-.3398.0063-.1035.0493-.2334.1484-.2886C7.064 10.1646 7.5156 9.3721 7.5156 8.5zM12.5156 8.5c0-.8721-.4517-1.6646-1.1787-2.0684-.0991-.0552-.1421-.1851-.1484-.2886-.0078-.1123.0225-.2607.1289-.3398.4438-.3286.5371-.9551.208-1.3984-.3286-.4443-.9561-.5381-1.3984-.208C9.4878 4.6699 9.1387 5.4463 9.1924 6.2734c.0532.8149.4917 1.5273 1.1729 1.9063.1108.0615.1504.2061.1504.3203s-.0396.2588-.1504.3203c-.6812.3789-1.1196 1.0913-1.1729 1.9063-.0537.8271.2954 1.6035.9346 2.0767C10.3057 12.936 10.5146 13 10.7212 13c.3062 0 .6084-.1396.8042-.4048.3291-.4434.2358-1.0698-.208-1.3984-.1064-.0791-.1367-.2275-.1289-.3398.0063-.1035.0493-.2334.1484-.2886C12.064 10.1646 12.5156 9.3721 12.5156 8.5z" />
@@ -68,7 +70,7 @@ const CarCard = ({
             Seats
           </p>
         </div>
-        <div className="text-center rounded-lg p-2 flex flex-col justify-center items-center gap-1">
+        <div className="text-center flex flex-col items-center gap-2">
           <svg
             version="1.1"
             id="Layer_1"
@@ -76,7 +78,7 @@ const CarCard = ({
             xmlnsXlink="http://www.w3.org/1999/xlink"
             x="0px"
             y="0px"
-            className="w-6 h-6 text-[#FFD700]"
+            className="w-8 h-8 text-[#FFD700]"
             viewBox="0 0 122.878 88.858"
             enableBackground="new 0 0 122.878 88.858"
             xmlSpace="preserve"
@@ -93,9 +95,9 @@ const CarCard = ({
       </div>
 
       {/* Button */}
-      <div className="my-8">
+      <div className="my-6">
         <Link
-          className="mb-5 px-8 py-3 min-w-[120px] text-center text-black font-bold bg-[#FFD700] rounded-xl hover:shadow-lg transition-shadow duration-300"
+          className="px-8 py-3 min-w-[120px] text-center text-black font-bold bg-[#FFD700] rounded-xl hover:shadow-lg transition-shadow duration-300"
           href={`/cars/${id}`}
         >
           Read More

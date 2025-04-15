@@ -6,7 +6,7 @@ import Script from "next/script";
 
 const BookNow = () => {
   return (
-    <div className="w-full h-screen flex flex-col pt-24">
+    <div className="w-full h-[1600px] flex flex-col pt-24">
       {/* Header Section */}
       <div className="px-4 pt-8 max-w-3xl mx-auto text-center">
         <div className="my-6">
@@ -19,14 +19,13 @@ const BookNow = () => {
         </div>
       </div>
       {/* Iframe Section */}
-      <div className="flex-1">
-        <a
-          href="https://book.mylimobiz.com/v4/chicagotrans"
-          data-ores-widget="website"
-          data-ores-alias="chicagotrans"
-          rel="noopener noreferrer"
-          id="chicagotrans-widget-link"
-        ></a>
+      <div className="p-12 mb-24 block">
+        <iframe
+          src="https://book.mylimobiz.com/v4/chicagotrans"
+          title="Reservation Form"
+          className="w-full h-[1280px] block border-0 mb-22"
+          style={{ overflow: "auto" }}
+        ></iframe>
       </div>
       <Script id="safari-widget-fix" strategy="afterInteractive">
         {`

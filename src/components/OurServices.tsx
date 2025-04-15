@@ -76,25 +76,25 @@ const OurServices = () => {
                 key={index}
                 className="relative overflow-hidden bg-[#0F0F0F] border border-[#FFD700] shadow-[0_4px_15px_0_rgba(255,215,0,0.5)] rounded-xl h-full flex flex-col"
               >
-                <div className="relative p-9">
+                <div className="relative p-6 sm:p-9">
                   <Image
                     src={service.icon}
                     alt={service.title}
                     width={48}
                     height={48}
-                    className="filter invert brightness-150"
+                    className="filter invert brightness-150 mx-auto sm:mx-0"
                   />
-                  <h3 className="mt-6 text-2xl font-bold text-[#FFD700] sm:mt-10">
+                  <h3 className="mt-4 text-xl sm:text-2xl font-bold text-[#FFD700] sm:mt-6">
                     {service.title}
                   </h3>
-                  <p className="mt-6 text-base text-gray-400">
+                  <p className="mt-4 text-sm sm:text-base text-gray-400">
                     {service.description}
                   </p>
                 </div>
-                <div className="relative p-9 mt-auto">
+                <div className="relative p-6 sm:p-9 mt-auto">
                   <Link
                     href={service.link}
-                    className="bg-[#FFD700] text-black px-8 py-3 rounded-full hover:bg-[#FFC107] transition-colors duration-300 text-sm font-semibold shadow-lg"
+                    className="bg-[#FFD700] text-black px-6 sm:px-8 py-2 sm:py-3 rounded-full hover:bg-[#FFC107] transition-colors duration-300 text-xs sm:text-sm font-semibold shadow-lg"
                   >
                     Read More
                   </Link>

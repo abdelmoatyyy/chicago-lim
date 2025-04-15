@@ -33,34 +33,36 @@ export default function Hero() {
         src="/ChatGPT Image Apr 7, 2025, 12_11_10 PM.png"
         alt="Hero Image"
         className="object-cover"
+        priority
       />
       <div className="absolute inset-0 bg-black/60" /> {/* Dark overlay */}
-      <div className="relative z-10 max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 gap-16 items-center space-y-12 md:space-y-0">
+      <div className="relative z-10 max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
         {/* Left Content */}
-        <div className="space-y-6 text-white">
+        <div className="space-y-6 text-white px-4 md:px-8">
           <h1
-            className="text-4xl md:text-5xl font-extrabold text-[#D4AF37] leading-tight tracking-tight font-serif"
+            className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#D4AF37] leading-tight tracking-tight font-serif"
             title="Luxury Limousine Services"
           >
             Luxury Limousine Services <br /> in the Heart of Chicago
           </h1>
-          <p className="text-base md:text-lg text-gray-300 leading-relaxed tracking-wide">
-            Ride in style with{" "}
+          <p className="text-sm sm:text-base lg:text-lg text-gray-300 leading-relaxed tracking-wide">
+            Ride in style with
             <span className="text-[#D4AF37] font-semibold">
+              {" "}
               Chicago Translimo
             </span>
             . Exceptional comfort, punctuality, and professionalism—your premium
             ride awaits.
           </p>
           <Link href="/book-now">
-            <button className="mt-2 p-3 bg-[#D4AF37] text-black rounded-xl shadow-md hover:shadow-lg transition duration-300 text-base md:text-lg font-semibold tracking-wide">
+            <button className="mt-2 p-3 bg-[#D4AF37] text-black rounded-xl shadow-md hover:shadow-lg transition duration-300 text-sm sm:text-base lg:text-lg font-semibold tracking-wide">
               Book Now
             </button>
           </Link>
         </div>
 
         {/* Right Reservation Form */}
-        <div className="h-full bg-transparent p-8 md:p-24 mx-auto md:mx-0">
+        <div className="h-full bg-transparent p-4 sm:p-8 lg:p-12 mx-auto lg:mx-0">
           <div className="h-full p-2">
             <div className="w-full h-full overflow-hidden rounded-lg">
               <a

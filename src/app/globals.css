@@ -11,6 +11,10 @@ body {
   padding: 0;
   font-family: "Cinzel", "Roboto", sans-serif;
   background-color: black;
+  background-image: url("/bgg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 /* Remove any extra spacing above the navbar */
