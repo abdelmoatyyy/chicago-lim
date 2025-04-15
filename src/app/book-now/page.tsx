@@ -20,12 +20,15 @@ const BookNow = () => {
       </div>
       {/* Iframe Section */}
       <div className="p-12 mb-24 block">
-        <iframe
-          src="https://book.mylimobiz.com/v4/chicagotrans"
-          title="Reservation Form"
-          className="w-full h-[1280px] block border-0 mb-22"
-          style={{ overflow: "auto" }}
-        ></iframe>
+        <a
+          href="https://book.mylimobiz.com/v4/chicagotrans"
+          data-ores-widget="website"
+          data-ores-alias="chicagotrans"
+          rel="noopener noreferrer"
+          id="chicagotrans-widget-link"
+        >
+          Online Reservations
+        </a>
       </div>
       <Script id="safari-widget-fix" strategy="afterInteractive">
         {`
