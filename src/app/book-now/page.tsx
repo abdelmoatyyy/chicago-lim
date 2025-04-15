@@ -6,7 +6,7 @@ import Script from "next/script";
 
 const BookNow = () => {
   return (
-    <div className="w-full h-[1600px] flex flex-col pt-24">
+    <div className="w-full h-[3000px] md:h-[1600px] flex flex-col pt-24">
       {/* Header Section */}
       <div className="px-4 pt-8 max-w-3xl mx-auto text-center">
         <div className="my-6">
@@ -14,12 +14,12 @@ const BookNow = () => {
             className="py-2 px-4 bg-[#CD9900] text-black font-bold rounded-xl hover:shadow-lg transition-shadow duration-300"
             href="https://book.mylimobiz.com/v4/(S(iyhgctydwk54dkz0us3bwvlp))/chicagotrans"
           >
-            Using iPhone Or Safari? Reserve Here
+            Using iPhone Or Safari? Reserve Here.
           </Link>
         </div>
       </div>
       {/* Iframe Section */}
-      <div className="p-12 mb-24 block">
+      <div className="p-12 mb-24 block  ">
         <a
           href="https://book.mylimobiz.com/v4/chicagotrans"
           data-ores-widget="website"

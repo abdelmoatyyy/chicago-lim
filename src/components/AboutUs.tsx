@@ -61,7 +61,7 @@ export default AboutUs;
 //       <Image
 //         src="/mercedes-benz-svgrepo-com.svg"
 //         alt="Mercedes-Benz"
-//         width={80}
+//         width={80}s
 //         height={50}
 //         className="filter invert"
 //       />
