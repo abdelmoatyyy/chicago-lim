@@ -58,23 +58,28 @@ export default function CarDetailsPage() {
                 />
               </div>
               <div className="grid grid-cols-3 gap-2 sm:gap-4 mt-4 z-20">
-                {car.images.map((image, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setActiveImage(image)}
-                    className={`rounded-lg z-20 overflow-hidden transition-all ${
-                      activeImage === image
-                        ? "ring-2 ring-[#CD9900]"
-                        : "opacity-75 hover:opacity-100"
-                    }`}
-                  >
-                    <img
-                      src={image}
-                      alt=""
-                      className="w-full h-16 sm:h-24 object-cover z-20"
-                    />
-                  </button>
-                ))}
+                {car.images.map(
+                  (
+                    image: string | undefined,
+                    index: React.Key | null | undefined
+                  ) => (
+                    <button
+                      key={index}
+                      onClick={() => setActiveImage(image)}
+                      className={`rounded-lg z-20 overflow-hidden transition-all ${
+                        activeImage === image
+                          ? "ring-2 ring-[#CD9900]"
+                          : "opacity-75 hover:opacity-100"
+                      }`}
+                    >
+                      <img
+                        src={image}
+                        alt=""
+                        className="w-full h-16 sm:h-24 object-cover z-20"
+                      />
+                    </button>
+                  )
+                )}
               </div>
             </div>
 
@@ -112,12 +117,30 @@ export default function CarDetailsPage() {
                 Features
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-4">
-                {car.features.map((feature, index) => (
-                  <div key={index} className="flex items-center gap-2">
-                    <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 text-[#CD9900]" />
-                    <span>{feature}</span>
-                  </div>
-                ))}
+                {car.features.map(
+                  (
+                    feature:
+                      | string
+                      | number
+                      | bigint
+                      | boolean
+                      | React.ReactElement<
+                          any,
+                          string | React.JSXElementConstructor<any>
+                        >
+                      | Iterable<React.ReactNode>
+                      | React.ReactPortal
+                      | Promise<React.AwaitedReactNode>
+                      | null
+                      | undefined,
+                    index: React.Key | null | undefined
+                  ) => (
+                    <div key={index} className="flex items-center gap-2">
+                      <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 text-[#CD9900]" />
+                      <span>{feature}</span>
+                    </div>
+                  )
+                )}
               </div>
             </div>
 
@@ -126,12 +149,30 @@ export default function CarDetailsPage() {
                 Services
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-4">
-                {car.services.map((service, index) => (
-                  <div key={index} className="flex items-center gap-2">
-                    <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 text-[#CD9900]" />
-                    <span>{service}</span>
-                  </div>
-                ))}
+                {car.services.map(
+                  (
+                    service:
+                      | string
+                      | number
+                      | bigint
+                      | boolean
+                      | React.ReactElement<
+                          any,
+                          string | React.JSXElementConstructor<any>
+                        >
+                      | Iterable<React.ReactNode>
+                      | React.ReactPortal
+                      | Promise<React.AwaitedReactNode>
+                      | null
+                      | undefined,
+                    index: React.Key | null | undefined
+                  ) => (
+                    <div key={index} className="flex items-center gap-2">
+                      <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 text-[#CD9900]" />
+                      <span>{service}</span>
+                    </div>
+                  )
+                )}
               </div>
             </div>
           </div>
