@@ -1,10 +1,25 @@
 "use client";
 import Link from "next/link";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Script from "next/script";
 
 const BookNow = () => {
+  const [showScroll, setShowScroll] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScroll(window.scrollY > 300);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <div className="w-full h-[5000px] md:h-[3000px] flex flex-col pt-24">
       {/* Header Section */}
@@ -53,6 +68,16 @@ const BookNow = () => {
         src="https://book.mylimobiz.com/v4/widgets/widget-loader.js"
         strategy="afterInteractive"
       />
+
+      {/* Scroll to Top Button */}
+      {showScroll && (
+        <button
+          onClick={scrollToTop}
+          className="fixed bottom-8 right-8 bg-[#CD9900] text-white p-5 rounded-full shadow-lg hover:bg-[#b8860b] transition duration-300 text-2xl"
+        >
+          ↑
+        </button>
+      )}
     </div>
   );
 };
