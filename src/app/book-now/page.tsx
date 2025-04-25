@@ -21,16 +21,16 @@ const BookNow = () => {
   };
 
   return (
-    <div className="w-full h-[5000px] md:h-[3000px] flex flex-col pt-24">
+    <div className="w-full  flex flex-col pt-24">
       {/* Header Section */}
       <div className="px-4 pt-8 max-w-3xl mx-auto text-center">
         <div className="my-6">
-          <Link
+          <a
             className="py-2 px-4 bg-[#CD9900] text-black font-bold rounded-xl hover:shadow-lg transition-shadow duration-300"
             href="https://book.mylimobiz.com/v4/(S(iyhgctydwk54dkz0us3bwvlp))/chicagotrans"
           >
             Using iPhone Or Safari? Reserve Here.
-          </Link>
+          </a>
         </div>
       </div>
       {/* Iframe Section */}

@@ -54,11 +54,11 @@ export default function Hero() {
             . Exceptional comfort, punctuality, and professionalism—your premium
             ride awaits.
           </p>
-          <Link href="/book-now">
+          <a href="/book-now">
             <button className="mt-2 p-3 bg-[#D4AF37] text-black rounded-xl shadow-md hover:shadow-lg transition duration-300 text-sm sm:text-base lg:text-lg font-semibold tracking-wide">
               Book Now
             </button>
-          </Link>
+          </a>
         </div>
 
         {/* Right Reservation Form */}
