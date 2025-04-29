@@ -51,7 +51,7 @@ export default function Hero() {
             isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          <div className="inline-block px-3 py-1 bg-[#D4AF37]/20 rounded-full border border-[#D4AF37]/30 mb-2">
+          <div className=" hidden md:inline-block px-3 py-1  md:mt-0 bg-[#D4AF37]/20 rounded-full border border-[#D4AF37]/30 mb-2">
             <span className="text-[#D4AF37] text-sm font-medium tracking-wider uppercase">
               Premium Transportation
             </span>

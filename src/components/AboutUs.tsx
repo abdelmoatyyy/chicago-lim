@@ -74,7 +74,7 @@ const AboutUs = () => {
             </div>
 
             {/* Image section with responsive design */}
-            <div className="w-full lg:w-1/2 order-1 lg:order-2">
+            <div className="w-full lg:w-1/2 order-1 lg:order-2 hidden md:block">
               <div className="relative rounded-xl overflow-hidden shadow-2xl transform lg:translate-y-0">
                 <div className="w-full h-full">
                   <Image
