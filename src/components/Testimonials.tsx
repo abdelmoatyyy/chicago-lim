@@ -1,219 +1,160 @@
 export default function Testimonials() {
   return (
-    <div className="py-8 font-[sans-serif] relative">
-      <div className="absolute inset-0 bg-black opacity-50 z-0"></div>{" "}
-      {/* Overlay */}
-      <div className="relative z-10">
-        <div className="mb-4">
-          <div className="mb-6 max-w-3xl text-center sm:text-center md:mx-auto md:mb-12">
-            <p className="text-base font-semibold uppercase tracking-wide text-[#FFD700] dark:text-[#FFD700]">
-              Customers
+    <div className="py-16 font-[sans-serif] relative bg-gray-950">
+      <div className="absolute inset-0 bg-black opacity-50 z-0 bg-[url('/testimonial-pattern.png')] bg-repeat"></div>
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="mb-12">
+          <div className="text-center">
+            <p className="inline-block px-3 py-1 text-sm font-semibold uppercase tracking-wider text-[#FFD700] bg-[#FFD700]/10 rounded-full mb-3">
+              What Our Customers Say
             </p>
-            <h2 className="font-heading mb-4 font-bold tracking-tight text-gray-100 dark:text-gray-100 text-3xl sm:text-5xl">
-              Testimonials
+            <h2 className="font-heading mb-6 font-bold tracking-tight text-gray-100 text-3xl sm:text-5xl">
+              Customer Testimonials
             </h2>
-            <p className="mx-auto mt-4 max-w-3xl text-xl text-gray-300 dark:text-gray-300">
-              Don&apos;t Only Hear From Us , Hear From Our Customers Too. We are
-              proud to have served thousands of customers over the years.
-              Here&apos;s what some of them have to say about their experience
-              with us.
+            <p className="mx-auto max-w-2xl text-xl text-gray-300 leading-relaxed">
+              Don&apos;t just take our word for it. Here&apos;s what our valued
+              customers have to say about their experience with Chicago Trans
+              Limo.
             </p>
           </div>
         </div>
-        <div className="grid md:grid-cols-3 gap-6 max-w-6xl max-md:gap-16 max-md:max-w-lg mx-auto mt-20">
-          <div className="w-full p-6 rounded-lg mx-auto bg-gray-900 relative max-w-sm border border-gray-700 shadow-lg text-center transform transition duration-300 hover:scale-105 hover:shadow-2xl">
-            <div className="absolute inset-0 bg-black opacity-20 rounded-lg"></div>
-            <img
-              src="/user.png"
-              className="w-14 h-14 rounded-full absolute right-0 left-0 mx-auto -top-7"
-            />
-            <div className="mt-6 text-center relative z-10">
-              <p className="text-sm text-gray-200 leading-relaxed">
-                I couldn’t have asked for a better limousine experience in
+
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mt-16">
+          {/* Testimonial Card 1 */}
+          <div className="w-full p-8 rounded-xl mx-auto bg-gradient-to-b from-gray-800 to-gray-900 relative border border-gray-700 shadow-lg text-center transform transition duration-500 hover:scale-105 hover:shadow-2xl group">
+            <div className="absolute inset-0 bg-black opacity-20 rounded-xl"></div>
+
+            <div className="relative z-10">
+              <div className="flex justify-center mb-6">
+                <img
+                  src="/user.png"
+                  alt="James Parker"
+                  className="w-20 h-20 rounded-full border-4 border-[#FFD700]/30 object-cover shadow-lg"
+                />
+              </div>
+
+              <div className="absolute -top-4 -left-1 text-6xl text-[#FFD700]/20 font-serif">
+                "
+              </div>
+              <p className="text-gray-200 leading-relaxed mb-6 italic">
+                I couldn't have asked for a better limousine experience in
                 Chicago! The driver was punctual, professional, and incredibly
                 polite. The car itself was spotless, luxurious, and
-                well-equipped with everything we needed for a smooth ride. The
-                ride was so smooth and comfortable that it turned our special
-                night into an unforgettable memory. Highly recommend this
-                service to anyone looking for a top-tier experience!
+                well-equipped with everything we needed for a smooth ride.
+              </p>
+              <div className="absolute -bottom-4 -right-1 text-6xl text-[#FFD700]/20 font-serif">
+                "
+              </div>
+
+              <div className="flex justify-center space-x-1 mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <svg
+                    key={i}
+                    className="w-5 h-5 fill-[#FFD700] group-hover:animate-pulse"
+                    viewBox="0 0 14 13"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+                  </svg>
+                ))}
+              </div>
+
+              <h4 className="text-lg font-bold text-white">James Parker</h4>
+              <p className="text-sm text-[#FFD700]">
+                Chicago, Business Executive
               </p>
             </div>
-            <div className="flex justify-center space-x-1 mt-6 relative z-10">
-              <svg
-                className="w-4 fill-[#FFD700]"
-                viewBox="0 0 14 13"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
-              </svg>
-              <svg
-                className="w-4 fill-[#FFD700]"
-                viewBox="0 0 14 13"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
-              </svg>
-              <svg
-                className="w-4 fill-[#FFD700]"
-                viewBox="0 0 14 13"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
-              </svg>
-              <svg
-                className="w-4 fill-[#FFD700]"
-                viewBox="0 0 14 13"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
-              </svg>
-              <svg
-                className="w-4 fill-[#FFD700]"
-                viewBox="0 0 14 13"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
-              </svg>
-            </div>
-            <div className="mt-6 text-center relative z-10">
-              <h4 className="text-sm whitespace-nowrap font-bold text-gray-200">
-                James Parker
-              </h4>
-            </div>
           </div>
-          <div className="w-full p-6 rounded-lg mx-auto bg-gray-900 relative max-w-sm border border-gray-700 shadow-lg text-center transform transition duration-300 hover:scale-105 hover:shadow-2xl">
-            <div className="absolute inset-0 bg-black opacity-20 rounded-lg"></div>
-            <img
-              src="/user.png"
-              className="w-14 h-14 rounded-full absolute right-0 left-0 mx-auto -top-7"
-            />
-            <div className="mt-6 text-center relative z-10">
-              <p className="text-sm text-gray-200 leading-relaxed">
+
+          {/* Testimonial Card 2 */}
+          <div className="w-full p-8 rounded-xl mx-auto bg-gradient-to-b from-gray-800 to-gray-900 relative border border-gray-700 shadow-lg text-center transform transition duration-500 hover:scale-105 hover:shadow-2xl group">
+            <div className="absolute inset-0 bg-black opacity-20 rounded-xl"></div>
+
+            <div className="relative z-10">
+              <div className="flex justify-center mb-6">
+                <img
+                  src="/user.png"
+                  alt="Karolina Adair"
+                  className="w-20 h-20 rounded-full border-4 border-[#FFD700]/30 object-cover shadow-lg"
+                />
+              </div>
+
+              <div className="absolute -top-4 -left-1 text-6xl text-[#FFD700]/20 font-serif">
+                "
+              </div>
+              <p className="text-gray-200 leading-relaxed mb-6 italic">
                 Absolutely stellar service! The limousine arrived right on time,
                 and the driver was courteous and accommodating. The attention to
-                detail was impeccable — from the chilled water bottles to the
-                perfectly set temperature in the car. We felt like royalty
-                driving through the streets of Chicago. It was perfect for our
-                anniversary celebration. I will definitely use this service
-                again for future events!
+                detail was impeccable — we felt like royalty driving through
+                Chicago.
               </p>
-            </div>
-            <div className="flex justify-center space-x-1 mt-6 relative z-10">
-              <svg
-                className="w-4 fill-[#FFD700]"
-                viewBox="0 0 14 13"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
-              </svg>
-              <svg
-                className="w-4 fill-[#FFD700]"
-                viewBox="0 0 14 13"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
-              </svg>
-              <svg
-                className="w-4 fill-[#FFD700]"
-                viewBox="0 0 14 13"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
-              </svg>
-              <svg
-                className="w-4 fill-[#FFD700]"
-                viewBox="0 0 14 13"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
-              </svg>
-              <svg
-                className="w-4 fill-[#FFD700]"
-                viewBox="0 0 14 13"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
-              </svg>
-            </div>
-            <div className="mt-6 text-center relative z-10">
-              <h4 className="text-sm whitespace-nowrap font-bold text-gray-200">
-                Karolina Adair
-              </h4>
+              <div className="absolute -bottom-4 -right-1 text-6xl text-[#FFD700]/20 font-serif">
+                "
+              </div>
+
+              <div className="flex justify-center space-x-1 mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <svg
+                    key={i}
+                    className="w-5 h-5 fill-[#FFD700] group-hover:animate-pulse"
+                    viewBox="0 0 14 13"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+                  </svg>
+                ))}
+              </div>
+
+              <h4 className="text-lg font-bold text-white">Karolina Adair</h4>
+              <p className="text-sm text-[#FFD700]">
+                Evanston, Wedding Planner
+              </p>
             </div>
           </div>
-          <div className="w-full p-6 rounded-lg mx-auto bg-gray-900 relative max-w-sm border border-gray-700 shadow-lg text-center transform transition duration-300 hover:scale-105 hover:shadow-2xl">
-            <div className="absolute inset-0 bg-black opacity-20 rounded-lg"></div>
-            <img
-              src="/user.png"
-              className="w-14 h-14 rounded-full absolute right-0 left-0 mx-auto -top-7"
-            />
-            <div className="mt-6 text-center relative z-10">
-              <p className="text-sm text-gray-200 leading-relaxed">
-                I am beyond impressed with the limousine service in Chicago.
-                Booking was straightforward, and the team was super
-                communicative throughout the process. The vehicle was stunning
-                inside and out, and the driver was incredibly friendly and
-                professional. They made sure every aspect of the trip was
-                perfect. It’s rare to find a service this reliable and elegant.
-                10/10 would recommend to everyone!
+
+          {/* Testimonial Card 3 */}
+          <div className="w-full p-8 rounded-xl mx-auto bg-gradient-to-b from-gray-800 to-gray-900 relative border border-gray-700 shadow-lg text-center transform transition duration-500 hover:scale-105 hover:shadow-2xl group">
+            <div className="absolute inset-0 bg-black opacity-20 rounded-xl"></div>
+
+            <div className="relative z-10">
+              <div className="flex justify-center mb-6">
+                <img
+                  src="/user.png"
+                  alt="Michael Brooks"
+                  className="w-20 h-20 rounded-full border-4 border-[#FFD700]/30 object-cover shadow-lg"
+                />
+              </div>
+
+              <div className="absolute -top-4 -left-1 text-6xl text-[#FFD700]/20 font-serif">
+                "
+              </div>
+              <p className="text-gray-200 leading-relaxed mb-6 italic">
+                I am beyond impressed with this limousine service in Chicago.
+                Booking was straightforward, the vehicle was stunning, and the
+                driver was incredibly professional. 10/10 would recommend!
               </p>
-            </div>
-            <div className="flex justify-center space-x-1 mt-6 relative z-10">
-              <svg
-                className="w-4 fill-[#FFD700]"
-                viewBox="0 0 14 13"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
-              </svg>
-              <svg
-                className="w-4 fill-[#FFD700]"
-                viewBox="0 0 14 13"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
-              </svg>
-              <svg
-                className="w-4 fill-[#FFD700]"
-                viewBox="0 0 14 13"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
-              </svg>
-              <svg
-                className="w-4 fill-[#FFD700]"
-                viewBox="0 0 14 13"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
-              </svg>
-              <svg
-                className="w-4 fill-[#FFD700]"
-                viewBox="0 0 14 13"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
-              </svg>
-            </div>
-            <div className="mt-6 text-center relative z-10">
-              <h4 className="text-sm whitespace-nowrap font-bold text-gray-200">
-                Michael Brooks
-              </h4>
+              <div className="absolute -bottom-4 -right-1 text-6xl text-[#FFD700]/20 font-serif">
+                "
+              </div>
+
+              <div className="flex justify-center space-x-1 mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <svg
+                    key={i}
+                    className="w-5 h-5 fill-[#FFD700] group-hover:animate-pulse"
+                    viewBox="0 0 14 13"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+                  </svg>
+                ))}
+              </div>
+
+              <h4 className="text-lg font-bold text-white">Michael Brooks</h4>
+              <p className="text-sm text-[#FFD700]">
+                Oak Park, Corporate Client
+              </p>
             </div>
           </div>
         </div>

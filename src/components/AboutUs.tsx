@@ -2,49 +2,93 @@ import React from "react";
 import Image from "next/image";
 import { Button } from "@/app/MTailwind";
 import Link from "next/link";
+
 const AboutUs = () => {
   return (
     <>
       <div
         id="about-us"
-        className="relative flex flex-row gap-18 w-full  justify-center h-full pt-24 px-24 items-center"
+        className="relative w-full py-16 md:py-24 px-6 md:px-12 lg:px-24"
       >
-        <div className="absolute inset-0 bg-black bg-opacity-50 z-0"></div>
-        <div className="relative z-10 w-full md:w-1/2">
-          <div className="flex flex-col space-y-4 ">
-            <h1 className="font-['Cinzel'] text-4xl md:text-6xl text-white">
-              <span className="text-[#CD9900]">Who We Are?</span>
-            </h1>
-            <p className="font-[Roboto] text-md text-gray-300">
-              Chicago Trans Limousine & Shuttle has been family-owned and
-              operated since 2003, our company has over decades of experience in
-              the private luxury black car, limousine, and ground transportation
-              industries. We started in Chicago and have grown our reach to
-              Iowa, Indiana, Wisconsin, and Michigan over the years!
-            </p>
-            <p className="text-gray-300">
-              Being a leader in the livery industry has solidified our
-              understanding of the basic needs of every passenger, corporate
-              administrator, and travel agent: safety, security, privacy, and
-              timeliness. We are committed to providing the best experience in
-              business and leisure travel.
-            </p>
+        {/* Background overlay with slightly improved opacity */}
+        <div className="absolute inset-0 bg-black bg-opacity-60 z-0"></div>
+
+        {/* Content container */}
+        <div className="relative z-10 max-w-7xl mx-auto">
+          <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-center">
+            {/* Text content */}
+            <div className="w-full lg:w-1/2 order-2 lg:order-1">
+              {/* Decorative accent line */}
+              <div className="w-16 h-1 bg-[#CD9900] mb-6 hidden md:block"></div>
+
+              <div className="flex flex-col space-y-6">
+                <h1 className="font-['Cinzel'] text-4xl md:text-5xl lg:text-6xl text-white">
+                  <span className="text-[#CD9900]">Who We Are?</span>
+                </h1>
+
+                <p className="font-['Roboto'] text-base md:text-lg text-gray-300 leading-relaxed">
+                  Chicago Trans Limousine & Shuttle has been family-owned and
+                  operated since 2003, our company has over decades of
+                  experience in the private luxury black car, limousine, and
+                  ground transportation industries. We started in Chicago and
+                  have grown our reach to Iowa, Indiana, Wisconsin, and Michigan
+                  over the years!
+                </p>
+
+                <p className="text-gray-300 text-base md:text-lg leading-relaxed">
+                  Being a leader in the livery industry has solidified our
+                  understanding of the basic needs of every passenger, corporate
+                  administrator, and travel agent: safety, security, privacy,
+                  and timeliness. We are committed to providing the best
+                  experience in business and leisure travel.
+                </p>
+
+                <div className="pt-4">
+                  <Button
+                    variant="gradient"
+                    color="amber"
+                    size="lg"
+                    className="hover:scale-105 transition-transform"
+                    placeholder={undefined}
+                    onPointerEnterCapture={undefined}
+                    onPointerLeaveCapture={undefined}
+                  >
+                    <Link href="about-us" className="flex items-center gap-2">
+                      Read More
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+                        />
+                      </svg>
+                    </Link>
+                  </Button>
+                </div>
+              </div>
+            </div>
+
+            {/* Image section with responsive design */}
+            <div className="w-full lg:w-1/2 order-1 lg:order-2">
+              <div className="relative rounded-xl overflow-hidden shadow-2xl transform lg:translate-y-0">
+                <div className="w-full h-full">
+                  <Image
+                    src="/about-limmo.png"
+                    alt="Chicago Trans Limousine & Shuttle"
+                    width={700}
+                    height={500}
+                    className="w-full h-auto object-cover"
+                  />
+                </div>
+                <div className="absolute bottom-0 left-0 w-full h-1/4 bg-gradient-to-t from-black to-transparent opacity-60"></div>
+              </div>
+            </div>
           </div>
-          <div className="w-full mt-6">
-            <Button
-              variant="gradient"
-              color="amber"
-              size="lg"
-              placeholder={undefined}
-              onPointerEnterCapture={undefined}
-              onPointerLeaveCapture={undefined}
-            >
-              <Link href="about-us">Read More</Link>
-            </Button>
-          </div>
-        </div>
-        <div className="relative z-10 md:block flex hidden">
-          <Image src="/about-limmo.png" alt="alo" width={700} height={41} />
         </div>
       </div>
     </>
@@ -52,60 +96,3 @@ const AboutUs = () => {
 };
 
 export default AboutUs;
-
-// <section className="relative hidden w-full md:flex justify-center items-center dark:bg-gray-900 p-8">
-// <div className="pl-16 absolute inset-0 bg-black bg-opacity-50 z-0"></div>
-// <div className=" relative z-10 max-w-screen-xl px-4 pb-8 mx-auto lg:pb-16">
-//   <div className="grid grid-cols-2 gap-8 text-gray-300 sm:gap-12 sm:grid-cols-3 lg:grid-cols-6 dark:text-gray-400">
-//     <div className=" flex items-center lg:justify-center">
-//       <Image
-//         src="/mercedes-benz-svgrepo-com.svg"
-//         alt="Mercedes-Benz"
-//         width={80}s
-//         height={50}
-//         className="filter invert"
-//       />
-//     </div>
-//     <div className="flex items-center lg:justify-center">
-//       <svg
-//         xmlns="http://www.w3.org/2000/svg"
-//         width={150}
-//         height={100}
-//         viewBox="0 0 36.003 7.949"
-//         className="text-[#CD9900] filter invert"
-//       >
-//         <path d="M20.322 2.998c-.18-.223-.083-.585.184-.796s.656-.183.82.017c.183.222.099.58-.167.791s-.657.21-.837-.012zM7.297.735a13.876 13.876 0 0 1 2.772-.7c.699-.096 1.486-.021 1.72.553.233.573-.129 1.607-2.176 2.519-1.992.888-4.53 1.317-6.113 1.351a5.861 5.861 0 0 0-.717 1.088c-.184.353-.269.706-.256.966.029.584.487.895 1.19.838.38-.031.821-.201 1.301-.454.954-.503 2.066-1.346 3.15-2.125.149-.107.474-.328.498-.344.632-.415 1.204-.681 1.875-.838.214-.05.582-.104.987-.091.596.018 1.17.129 1.478.317-.151.094-.293.221-.374.292-.819.716-1.485 1.555-1.82 2.079-.096.15-.159.357-.084.425.063.058.2.059.411-.075.405-.257 1.275-1.063 1.804-1.517.124-.106.864-.661 1.107-.806l.015-.01c.521-.31.997-.473 1.326-.562.745-.202 1.432-.168 1.547-.086a63 63 0 0 0 1.956-1.887c.311 0 .908-.001 1.237-.008a3.258 3.258 0 0 0-.313.239c-.321.309-1.388 1.334-2.249 2.206-.933.944-1.456 1.553-1.731 2.031-.14.242-.199.438-.115.507.091.076.277.014.49-.127.483-.32 1.826-1.535 2.294-2.002 0 0 .782-.779.957-.941.311.001.882-.001 1.21-.008-.089.06-.252.172-.32.237-.629.605-1.48 1.489-1.852 2.021-.293.42-.255.684-.154.79.193.202.804.085 1.696-.403-.074-.402.067-1.022.382-1.508.675-1.042 2.088-2.349 3.178-2.897.547-.275.898-.321 1.114-.148.26.208.181.688-.107 1.137-.874 1.358-1.832 2.175-3.693 3.375-.001.319.176.531.633.531.597 0 1.196-.209 1.824-.524-.06-.396.1-1.014.401-1.478.67-1.033 2.091-2.35 3.175-2.896.567-.285.898-.313 1.112-.146.272.212.181.701-.126 1.176-.847 1.312-1.8 2.125-3.693 3.346-.03.345.149.515.421.507.433-.012.974-.38 1.775-1.106.262-.237 1.137-1.02 1.346-1.156.64-.42 1.207-.681 1.874-.84a4.19 4.19 0 0 1 1.256-.075c.473.037.918.134 1.21.3-.161.101-.315.238-.385.299a10.541 10.541 0 0 0-1.812 2.076c-.106.167-.154.359-.085.423.074.067.218.043.405-.075.405-.257 1.979-1.693 1.995-1.709.64-.626 1.356-1.082 2.107-1.313.681-.209 1.37-.174 1.578.289.298.663-.354 1.488-1.353 1.672l-.096-.35c.491-.321.937-.943.709-1.188-.166-.179-.521-.089-.813.079-.506.291-1.218.957-1.629 1.653-.268.452-.302.913-.048 1.145.25.228.617.241.971.155.783-.19 1.446-.705 1.99-1.289l.158.452c-.601.625-1.303 1.063-2.03 1.249-.819.21-1.422.118-1.813-.287-.267-.276-.371-.727-.294-1.19-.472.439-.837.769-1.129.971-.363.251-.829.433-1.164.207-.339-.228-.281-.812-.146-1.074a7.85 7.85 0 0 1-1.194.902c-.564.343-1.118.361-1.374.048-.162-.199-.223-.523-.099-.927-.451.401-.896.758-1.318.966a1.651 1.651 0 0 1-.818.186c-.497-.023-.775-.27-.933-.597-.858.451-1.468.599-2.096.599-.601 0-.999-.251-1.209-.58a4.7 4.7 0 0 1-1.103.494c-.541.149-1.073.144-1.335-.124-.194-.198-.335-.575-.133-1.117-.501.47-.864.802-1.169 1.016-.352.246-.89.456-1.209.201-.367-.294-.234-.852-.102-1.075-.11.103-.214.19-.317.278a7.766 7.766 0 0 1-.899.66c-.53.338-.964.308-1.218.148-.322-.201-.339-.682-.206-1.112-.443.407-.799.716-1.076.908-.373.259-.828.43-1.168.201-.373-.251-.235-.895-.149-1.061-.164.15-.344.292-.527.432a7.85 7.85 0 0 1-.657.457c-.534.324-1.101.384-1.368.058-.209-.256-.266-.692.025-1.26-1.702 1.335-3.107 2.245-4.399 2.245-1.365 0-2.101-1.258-1.69-2.54a4.19 4.19 0 0 1 .515-1.071C.764 4.114.074 3.679.005 2.908c-.065-.729.524-1.244.964-1.534A6.437 6.437 0 0 1 2.047.798C3.056.38 4.555.106 5.717.145l.201.444C5.866.58 5.809.575 5.747.569c-.44-.035-1.226.028-2.031.228-.72.178-1.514.495-2.003.913-.69.59-.665 1.185-.428 1.537.214.317.521.503 1.095.612.212-.247.457-.487.736-.733C4.312 2.077 5.81 1.272 7.297.735z" />
-//       </svg>
-//     </div>
-//     {/* <div className="flex items-center lg:justify-center">
-//       <svg
-//         fill="#ffffff"
-//         viewBox="0 0 24 24"
-//         role="img"
-//         xmlns="http://www.w3.org/2000/svg"
-//         className="filter invert"
-//       >
-//         <path d="M12 8.236C5.872 8.236.905 9.93.905 12.002S5.872 15.767 12 15.767c6.127 0 11.094-1.693 11.094-3.765 0-2.073-4.967-3.766-11.094-3.766zM6.302 14.476c-.656.005-1.233-.4-1.3-1.101a1.415 1.415 0 0 1 .294-1.02c.195-.254.525-.465.804-.517.09-.017.213-.006.264.054.079.093.056.194-.023.234-.213.109-.47.295-.597.55a.675.675 0 0 0 .034.696c.263.397.997.408 1.679-.225.169-.156.32-.304.473-.48.3-.344.4-.47.8-1.024.005-.006.006-.014.004-.018-.003-.007-.009-.01-.02-.01-.267.007-.5.087-.725.255-.065.048-.159.041-.2-.021-.046-.07-.013-.163.062-.215.363-.253.76-.298 1.166-.367 0 0 .028.002.051-.03.167-.213.292-.405.47-.621.178-.22.41-.42.586-.572.246-.212.404-.283.564-.37.043-.022-.005-.049-.018-.049-.896-.168-1.827-.386-2.717-.056-.616.23-.887.718-.757 1.045.093.231.397.27.683.13a1.55 1.55 0 0 0 .611-.544c.087-.134.27-.038.171.195-.26.611-.757 1.097-1.363 1.118-.516.016-.849-.363-.848-.831.002-.924 1.03-1.532 2.11-1.622 1.301-.108 2.533.239 3.825.395.989.12 1.938.123 2.932-.106.118-.025.2.05.193.168-.01.172-.143.337-.47.516-.373.204-.763.266-1.17.27-.984.008-1.901-.376-2.85-.582.002.041.012.091-.023.117-.525.388-1 .782-1.318 1.334-.011.013-.005.025.013.024.277-.015.525-.022.783-.042.045-.004.047-.015.043-.048a.64.64 0 0 1 .2-.558c.172-.153.387-.17.53-.06.16.126.147.353.058.523a.63.63 0 0 1-.382.31s-.03.006-.026.034c.006.043.2.151.217.18.017.027.008.07-.021.102a.123.123 0 0 1-.095.045c-.033 0-.053-.012-.096-.035a.92.92 0 0 1-.27-.217c-.024-.031-.037-.032-.099-.029-.279.017-.714.059-1.009.096-.071.008-.082.022-.096.047-.47.775-.972 1.61-1.523 2.17-.592.6-1.083.758-1.604.762z" />
-//       </svg>
-//     </div> */}
-//     <div className="flex items-center lg:justify-center">
-//       <Image
-//         src="/chevrolet-svgrepo-com.svg"
-//         alt="Chevrolet"
-//         width={80}
-//         height={50}
-//         className="filter invert"
-//       />
-//     </div>
-//     <div className="flex items-center lg:justify-center">
-//       <Image
-//         src="/Lincoln_logo.svg"
-//         alt="Lincoln"
-//         width={120}
-//         height={50}
-//         className="filter invert"
-//       />
-//     </div>
-//   </div>
-// </div>
-// </section>

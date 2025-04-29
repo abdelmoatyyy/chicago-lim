@@ -103,7 +103,7 @@ export function NavBar() {
               </svg>
               <div>
                 <h2 className="">Call to book an order:</h2>
-                <Link href="">
+                <Link href="tel:(312)-645-0505">
                   <p className="hover:text-[#A57D02]">1-(312)-645-0505</p>
                 </Link>
               </div>

@@ -131,7 +131,7 @@ const Fleet = () => {
         <div className="relative px-4 sm:px-6 lg:px-8">
           {/* Overlay */}
           <div className="absolute inset-0 bg-black bg-opacity-50 z-10"></div>
-          <div className="relative z-20 max-w-3xl text-center mx-auto">
+          <div className="relative z-20 max-w-3xl text-center mx-auto pt-12">
             <p className="text-base font-semibold uppercase tracking-wide text-[#FFD700]">
               Explore
             </p>

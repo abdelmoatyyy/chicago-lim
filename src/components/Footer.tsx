@@ -1,128 +1,193 @@
 import Link from "next/link";
 import React from "react";
 import Image from "next/image";
-import { Linkedin, Twitter } from "lucide-react";
+import { Linkedin, Facebook, Instagram } from "lucide-react";
 
 const Footer = () => {
   return (
-    <>
-      {/* Changed the main container to full width */}
-      <div className="relative w-full px-4 pt-16 text-gray-300">
-        <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
-        <div className="relative z-20 grid gap-10 row-gap-6 mb-8 sm:grid-cols-2 lg:grid-cols-4 px-16">
+    <footer className="relative w-full text-gray-100">
+      {/* Gradient background overlay */}
+      <div className="absolute inset-0 bg-black opacity-70 z-10"></div>
+
+      <div className="relative z-20 container mx-auto px-4 md:px-6 lg:px-8 pt-16 pb-8">
+        <div className="grid gap-12 row-gap-8 mb-10 sm:grid-cols-2 lg:grid-cols-4">
+          {/* Company info section */}
           <div className="sm:col-span-2">
             <Link
               href="/"
               aria-label="Go home"
               title="Company"
-              className="inline-flex items-center"
+              className="inline-flex items-center mb-4"
             >
               <Image
                 src="/chicagotransLOGO.png"
-                alt="Company"
-                width={150}
-                height={40}
+                alt="Chicago Trans Limo"
+                width={180}
+                height={50}
+                className="brightness-110"
               />
             </Link>
             <div className="mt-6 lg:max-w-sm">
-              <p className="text-sm text-gray-300">
+              <p className="text-sm leading-relaxed text-gray-300">
                 Luxury cars combine elegance and comfort, offering an unmatched
                 driving experience for every journey.
               </p>
               <div className="flex gap-6 mt-8">
-                <Image src="/foter.png" alt="footer" width={90} height={50} />
-                <Image src="/foter2.png" alt="footer" width={90} height={50} />
+                <Image
+                  src="/foter.png"
+                  alt="footer"
+                  width={90}
+                  height={50}
+                  className="hover:opacity-90 transition-opacity duration-300"
+                />
+                <Image
+                  src="/foter2.png"
+                  alt="footer"
+                  width={90}
+                  height={50}
+                  className="hover:opacity-90 transition-opacity duration-300"
+                />
               </div>
             </div>
           </div>
-          <div className="space-y-2 text-sm">
-            <p className="text-base font-bold tracking-wide text-white">
+
+          {/* Contact section */}
+          <div className="space-y-4">
+            <h3 className="text-lg font-bold tracking-wide text-white mb-5 pb-2 border-b border-gray-700 inline-block">
               Contacts
-            </p>
-            <div className="flex">
-              <p className="mr-1 text-gray-300">Phone:</p>
+            </h3>
+            <div className="flex items-center">
+              <div className="w-8 h-8 flex items-center justify-center rounded-full bg-blue-500/10 mr-3">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="text-blue-400"
+                >
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+              </div>
               <Link
                 href="tel:312-645-0505"
                 aria-label="Our phone"
                 title="Our phone"
-                className="transition-colors duration-300 text-blue-400 hover:text-blue-600"
-                target="_blank"
+                className="transition-colors duration-300 text-blue-400 hover:text-blue-300 hover:underline"
               >
-                1-(312)-645-0505{" "}
+                1-(312)-645-0505
               </Link>
             </div>
-            <div className="flex">
-              <p className="mr-1 text-gray-300">Email:</p>
+            <div className="flex items-center">
+              <div className="w-8 h-8 flex items-center justify-center rounded-full bg-blue-500/10 mr-3">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="text-blue-400"
+                >
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
               <Link
                 href="mailto:info@chicagotranslimo.com"
                 aria-label="Our email"
                 title="Our email"
-                className="transition-colors duration-300 text-blue-400 hover:text-blue-600"
+                className="transition-colors duration-300 text-blue-400 hover:text-blue-300 hover:underline"
               >
-                info@chicagotranslimo.com{" "}
+                info@chicagotranslimo.com
               </Link>
             </div>
-            <div className="flex">
-              <p className="mr-1 text-gray-300">Address:</p>
+            <div className="flex items-center">
+              <div className="w-8 h-8 flex items-center justify-center rounded-full bg-blue-500/10 mr-3">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="text-blue-400"
+                >
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
               <Link
                 href="https://www.google.com/maps"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Our address"
                 title="Our address"
-                className="transition-colors duration-300 text-blue-400 hover:text-blue-600"
+                className="transition-colors duration-300 text-blue-400 hover:text-blue-300 hover:underline"
               >
                 7339 N Keystone Ave Lincolnwood IL 60712
               </Link>
             </div>
           </div>
+
+          {/* Social media section */}
           <div>
-            <span className="text-base font-bold tracking-wide text-white">
+            <h3 className="text-lg font-bold tracking-wide text-white mb-5 pb-2 border-b border-gray-700 inline-block">
               Social
-            </span>
-            <div className="flex items-center mt-1 space-x-3">
+            </h3>
+            <div className="flex items-center mt-4 space-x-4">
               <Link
                 href="https://www.linkedin.com/in/chicagotranslimo-91549a165?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
-                className="text-gray-300 transition-colors duration-300 hover:text-blue-400"
+                className="w-10 h-10 flex items-center justify-center rounded-full bg-blue-500/10 text-gray-300 transition-all duration-300 hover:bg-blue-800 hover:text-white"
                 target="_blank"
+                aria-label="LinkedIn"
               >
-                <Linkedin size={24} />
+                <Linkedin size={20} />
               </Link>
               <Link
                 href="https://www.instagram.com/chicagotranslimousine/profilecard/"
-                className="text-gray-300 transition-colors duration-300 hover:text-blue-400"
+                className="w-10 h-10 flex items-center justify-center rounded-full bg-blue-500/10 text-gray-300 transition-all duration-300 hover:bg-gradient-to-br from-purple-600 to-pink-500 hover:text-white"
                 target="_blank"
+                aria-label="Instagram"
               >
-                <svg viewBox="0 0 30 30" fill="currentColor" className="h-6">
-                  <circle cx={15} cy={15} r={4} />
-                  <path d="M19.999,3h-10C6.14,3,3,6.141,3,10.001v10C3,23.86,6.141,27,10.001,27h10C23.86,27,27,23.859,27,19.999v-10   C27,6.14,23.859,3,19.999,3z M15,21c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S18.309,21,15,21z M22,9c-0.552,0-1-0.448-1-1   c0-0.552,0.448-1,1-1s1,0.448,1,1C23,8.552,22.552,9,22,9z" />
-                </svg>
+                <Instagram size={20} />
               </Link>
               <Link
                 href="https://www.facebook.com/chicagotranslimousine"
-                className="text-gray-300 transition-colors duration-300 hover:text-blue-400"
+                className="w-10 h-10 flex items-center justify-center rounded-full bg-blue-500/10 text-gray-300 transition-all duration-300 hover:bg-blue-600 hover:text-white"
                 target="_blank"
+                aria-label="Facebook"
               >
-                <svg viewBox="0 0 24 24" fill="currentColor" className="h-5">
-                  <path d="M22,0H2C0.895,0,0,0.895,0,2v20c0,1.105,0.895,2,2,2h11v-9h-3v-4h3V8.413c0-3.1,1.893-4.788,4.659-4.788 c1.325,0,2.463,0.099,2.795,0.143v3.24l-1.918,0.001c-1.504,0-1.795,0.715-1.795,1.763V11h4.44l-1,4h-3.44v9H22c1.105,0,2-0.895,2-2 V2C24,0.895,23.105,0,22,0z" />
-                </svg>
+                <Facebook size={20} />
               </Link>
             </div>
-            <p className="mt-4 text-sm text-gray-300">
-              Follow Us Everywhere To Stay Updated With Us And Our Services
+            <p className="mt-6 text-sm text-gray-300">
+              Follow us everywhere to stay updated with us and our services
             </p>
           </div>
         </div>
-        <div className="relative z-20 flex flex-col-reverse justify-between pt-5 pb-10 border-t border-gray-700 lg:flex-row">
-          <p className="text-sm text-gray-300">
-            © Copyright 2016 Chicagotrans Limousine Inc All Right Reserved
+
+        {/* Footer bottom */}
+        <div className="flex flex-col-reverse justify-between pt-5 pb-4 border-t border-gray-700 lg:flex-row items-center">
+          <p className="text-sm text-gray-400 mt-4 lg:mt-0">
+            © Copyright 2016-{new Date().getFullYear()} Chicagotrans Limousine
+            Inc. All Rights Reserved
           </p>
-          <ul className="flex flex-col mb-3 space-y-2 lg:mb-0 sm:space-y-0 sm:space-x-5 sm:flex-row">
+          <ul className="flex flex-wrap justify-center gap-4 mb-2 lg:mb-0">
             <li>
               <Link
                 href="/"
-                className="text-sm text-gray-300 transition-colors duration-300 hover:text-blue-400"
-                target="_blank"
+                className="text-sm text-gray-400 transition-colors duration-300 hover:text-blue-400 hover:underline"
               >
                 F.A.Q
               </Link>
@@ -130,8 +195,7 @@ const Footer = () => {
             <li>
               <Link
                 href="/"
-                className="text-sm text-gray-300 transition-colors duration-300 hover:text-blue-400"
-                target="_blank"
+                className="text-sm text-gray-400 transition-colors duration-300 hover:text-blue-400 hover:underline"
               >
                 Privacy Policy
               </Link>
@@ -139,7 +203,7 @@ const Footer = () => {
             <li>
               <Link
                 href="/"
-                className="text-sm text-gray-300 transition-colors duration-300 hover:text-blue-400"
+                className="text-sm text-gray-400 transition-colors duration-300 hover:text-blue-400 hover:underline"
               >
                 Terms &amp; Conditions
               </Link>
@@ -147,7 +211,7 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-    </>
+    </footer>
   );
 };
 
