@@ -19,6 +19,7 @@ const geistMono = localFont({
 // Environment variables
 const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID;
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
+const GA_MEASUREMENT_ID = "G-VNDBYW5WRF";
 
 export const metadata: Metadata = {
   title: "Chicago Translimo",
@@ -64,6 +65,20 @@ export default function RootLayout({
             gtag('js', new Date());
             gtag('config', '${GA_ID}');
           `}
+        </Script>
+
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+          strategy="afterInteractive"
+        />
+        {/* Initialize GA */}
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', '${GA_MEASUREMENT_ID}');
+        `}
         </Script>
       </head>
       <body
