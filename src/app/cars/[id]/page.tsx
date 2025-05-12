@@ -99,11 +99,29 @@ export default function CarDetailsPage() {
                     <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-[#CD9900]" />
                     <span>{car.interior}</span>
                   </div>
+                  <div className="flex items-center gap-2">
+                    <Clock className="w-4 h-4 sm:w-5 sm:h-5 text-[#CD9900]" />
+                    <span>{car.perHourRate}</span>
+                  </div>
+                  <div className="flex flex-col">
+                    <div className="flex items-center gap-2 mb-1">
+                      <Plane className="w-5 h-5 sm:w-5 sm:h-5 text-[#CD9900]" />
+                      <span className="text-[#CD9900] font-semibold">
+                        O'Hare Or Midway Airport
+                      </span>
+                    </div>
+                    <div className="ml-7 text-gray-300 text-sm mb-1">
+                      From / To City
+                    </div>
+                    <div className="ml-7">
+                      <span>{car.airportTransfer}</span>
+                    </div>
+                  </div>
                 </div>
               </div>
 
               <Link href="/book-now">
-                <button className="w-full bg-[#CD9900] text-white py-3 sm:py-4 rounded-xl font-semibold hover:bg-black transition-colors">
+                <button className="w-full mt-5 bg-[#CD9900] text-white py-3 sm:py-4 rounded-xl font-semibold hover:bg-black transition-colors">
                   Book Now
                 </button>
               </Link>

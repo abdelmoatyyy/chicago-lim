@@ -9,8 +9,8 @@ const carData: Record<any, any> = {
       "/av3.avif",
     ],
     perHourRate: "$95 / Hour (2 Hrs Min)",
-    perDayRate: "$900 / Day ",
-    airportTransfer: "$115-$550 (Depends on destination)",
+    perDayRate: "$900 / Day",
+    airportTransfer: "$125 All Included",
     passengers: "6 Passengers",
     interior: "Leather Interior",
     features: [
@@ -41,9 +41,9 @@ const carData: Record<any, any> = {
       "/cadilac-ct6-slide-1.avif",
       "/cadilac-ct6-slide-3.avif",
     ],
-    perHourRate: "$95 / Hour (3 Hrs Min)",
-    perDayRate: "$900 / Day ",
-    airportTransfer: "$115-$550 (Depends on destination)",
+    perHourRate: "$95 / Hour (2 Hrs Min)",
+    perDayRate: "$900 / Day",
+    airportTransfer: "$125 All Included",
     passengers: "3 Passengers",
     interior: "Leather Interior",
     features: ["Heated Seats", "On Board Wi-Fi", "Phone Charger"],
@@ -61,6 +61,7 @@ const carData: Record<any, any> = {
     overview:
       "The Cadillac CT6 is a luxury sedan with top-notch comfort and advanced features for a premium ride experience.",
   },
+
   3: {
     name: "Mercedes Premier Sedan",
     images: [
@@ -68,9 +69,9 @@ const carData: Record<any, any> = {
       "/sedan31.webp",
       "/sedan32.jpg",
     ],
-    perHourRate: "$250 / Hour (3 Hrs Min)",
-    perDayRate: "$2400 / Day ",
-    airportTransfer: "$225-$675 (Depends on destination)",
+    perHourRate: "$95 / Hour (3 Hrs Min)",
+    perDayRate: "$2400 / Day",
+    airportTransfer: "$125 All Included",
     passengers: "3 Passengers",
     interior: "Leather Interior",
     features: ["Heated Seats", "On Board Wi-Fi", "Phone Charger"],
@@ -88,12 +89,13 @@ const carData: Record<any, any> = {
     overview:
       "A premium sedan that combines luxury and performance, perfect for discerning travelers.",
   },
+
   4: {
     name: "Lincoln Navigator SUV",
     images: ["/pngegg (1).png", "/suv11.webp", "/suv12.webp"],
-    perHourRate: "$125 / Hour (3 Hrs Min)",
-    perDayRate: "$1400 / Day ",
-    airportTransfer: "$125-$760 (Depends on destination)",
+    perHourRate: "$120 / Hour (2 Hrs Min)",
+    perDayRate: "$1400 / Day",
+    airportTransfer: "$150 All Included",
     passengers: "6 Passengers",
     interior: "Black Leather Interior",
     features: [
@@ -115,6 +117,7 @@ const carData: Record<any, any> = {
     overview:
       "A luxury SUV designed for any journey, offering all modern amenities and exceptional comfort.",
   },
+
   5: {
     name: "Cadillac Escalade SUV",
     images: [
@@ -125,9 +128,9 @@ const carData: Record<any, any> = {
       "/cadilac-slide-4.jpg",
       "/cadillac-suv-slide-3.avif",
     ],
-    perHourRate: "$145 / Hour (3 Hrs Min)",
-    perDayRate: "$1440 / Day ",
-    airportTransfer: "$145-$780 (Depends on destination)",
+    perHourRate: "$135 / Hour (2 Hrs Min)",
+    perDayRate: "$1440 / Day",
+    airportTransfer: "$165 All Included",
     passengers: "6 Passengers",
     interior: "Black Leather Interior",
     features: [
@@ -149,6 +152,7 @@ const carData: Record<any, any> = {
     overview:
       "A luxury SUV offering comfort, technology, and versatility for every journey.",
   },
+
   6: {
     name: "Sprinter Executive Van",
     images: [
@@ -156,9 +160,9 @@ const carData: Record<any, any> = {
       "/sprinter-slide-1.avif",
       "/sprinter-slide-2.avif",
     ],
-    perHourRate: "$195 / Hour (3 Hrs Min)",
-    perDayRate: "$1920 / Day ",
-    airportTransfer: "$350-$780 (Depends on destination)",
+    perHourRate: "$145 / Hour (2 Hrs Min)",
+    perDayRate: "$1920 / Day",
+    airportTransfer: "$225 All Included",
     passengers: "10 Passengers",
     interior: "Leather Seats",
     features: ["TV", "WiFi", "Soft Drinks & Snacks", "Max Radio"],
@@ -182,9 +186,9 @@ const carData: Record<any, any> = {
       "/transit-slide-1.jpg",
       "/transit-slide-2.jpg",
     ],
-    perHourRate: "$130 / Hour (2 Hrs Min)",
-    perDayRate: "$1320 / Day ",
-    airportTransfer: "$220-$650 (Depends on destination)",
+    perHourRate: "$135 / Hour (2 Hrs Min)",
+    perDayRate: "$1320 / Day",
+    airportTransfer: "$195 All Included",
     passengers: "10 Passengers",
     interior: "Black Leather Interior",
     features: ["On Board Wi-Fi", "Phone Charger"],
@@ -199,6 +203,7 @@ const carData: Record<any, any> = {
     overview:
       "Transit Van offers spacious, comfortable rides with a focus on group travel. Perfect for family or corporate events.",
   },
+
   8: {
     name: "Sprinter Limo",
     images: [
@@ -206,9 +211,9 @@ const carData: Record<any, any> = {
       "/sprinter-slide-1.avif",
       "/sprinter-slide-2.avif",
     ],
-    perHourRate: "$175 / Hour (3 Hrs Min)",
-    perDayRate: "$1680 / Day ",
-    airportTransfer: "$120-$150 (Depends on destination)",
+    perHourRate: "$330 / Hour (4 Hrs Min)",
+    perDayRate: "$1680 / Day",
+    airportTransfer: "N/A (Hourly Only)",
     passengers: "12 Passengers",
     interior: "Black Leather Interior",
     features: [
@@ -230,6 +235,7 @@ const carData: Record<any, any> = {
     overview:
       "Sprinter Limo vans offer luxury and entertainment, making them perfect for parties and VIP travel.",
   },
+
   9: {
     name: "Ford Party Bus Limo",
     images: [
@@ -237,9 +243,9 @@ const carData: Record<any, any> = {
       "/ford-bus-slide-1.jpg",
       "/ford-bus-slide-2.jpg",
     ],
-    perHourRate: "$300 / Hour (3 Hrs Min)",
-    perDayRate: "$2880 / Day ",
-    airportTransfer: "$750-$1500 (Depends on destination)",
+    perHourRate: "$330 / Hour (4 Hrs Min)",
+    perDayRate: "$2880 / Day",
+    airportTransfer: "N/A (Hourly Only)",
     passengers: "25 Passengers",
     interior: "Black Leather Interior",
     features: [
@@ -262,12 +268,13 @@ const carData: Record<any, any> = {
     overview:
       "With space for up to 25 passengers, the Ford Party Bus Limo is the ultimate choice for celebrations and large group events.",
   },
+
   10: {
     name: "45 Passenger Bus",
     images: ["/pngegg (6) (1).png", "/bus21.webp", "/bus22.webp"],
-    perHourRate: "$278 / Hour (3 Hrs Min)",
-    perDayRate: "$2400 / Day ",
-    airportTransfer: "Starting $450 (Depends on destination)",
+    perHourRate: "$225 / Hour (4 Hrs Min)",
+    perDayRate: "$2400 / Day",
+    airportTransfer: "$650 All Included",
     passengers: "45 Passengers",
     interior: "Leather Seats",
     features: ["WIFI", "TV", "Soft Drinks"],
@@ -283,8 +290,6 @@ const carData: Record<any, any> = {
     overview:
       "The 45 Passenger Bus offers comfort and convenience for large groups, equipped with modern amenities for a great journey.",
   },
-
-  // Continue for all remaining vehicles (e.g., Transit Van, Sprinter Limo, Ford Party Bus, 45 Passenger Bus)...
 };
 
 export default carData;

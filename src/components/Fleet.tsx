@@ -18,7 +18,7 @@ const Fleet = () => {
         "tinted windows, a great sound system, and room for all your luggage,",
       hour: 95,
       day: 900,
-      airport: "115 - 550",
+      airport: "$125 All Included",
       seats: 6,
     },
     {
@@ -29,7 +29,7 @@ const Fleet = () => {
         "tinted windows, a great sound system, and room for all your luggage,",
       hour: 95,
       day: 900,
-      airport: "115 - 550",
+      airport: "$125 All Included",
       seats: 3,
     },
     {
@@ -38,21 +38,20 @@ const Fleet = () => {
       imageUrl: "/car_01-768x510-removebg-preview.png",
       descreption:
         "tinted windows, a great sound system, and room for all your luggage,",
-      hour: 250,
+      hour: 95,
       day: 2400,
-      airport: "225 - 675",
+      airport: "$125 All Included",
       seats: 3,
     },
     {
       id: 4,
       title: "Lincoln Navigator SUV",
-
       imageUrl: "/pngegg (1).png",
       descreption:
-        "You’ll surely have a smooth ride to your destination in all of our incredible Luxury SUVs.",
-      hour: 125,
+        "You'll surely have a smooth ride to your destination in all of our incredible Luxury SUVs.",
+      hour: 120,
       day: 1400,
-      airport: "125 - 760",
+      airport: "$150 All Included",
       seats: 6,
     },
     {
@@ -60,22 +59,21 @@ const Fleet = () => {
       title: "Cadillac Escalade suv",
       imageUrl: "/download.png",
       descreption:
-        "In all of our incredible Luxury SUVs, you’ll be sure to have a smooth ride to your destination.",
-      hour: 145,
+        "In all of our incredible Luxury SUVs, you'll be sure to have a smooth ride to your destination.",
+      hour: 135,
       day: 1440,
-      airport: "145 - 780",
+      airport: "$165 All Included",
       seats: 6,
     },
     {
       id: 6,
       title: "Sprinter Executive Van",
-
       imageUrl: "/pngegg (5).png",
       descreption:
         "Executive Sprinter Limo vans for all your transportation needs. Our professional chauffeurs will greet you with warmth and make sure you arrive at your destination in style.",
-      hour: 195,
+      hour: 145,
       day: 1920,
-      airport: "350 - 780",
+      airport: "$225 All Included",
       seats: 10,
     },
     {
@@ -84,31 +82,32 @@ const Fleet = () => {
       imageUrl: "/pngwing.com (1).png",
       descreption:
         "ChicagoTrans Limousine and Shuttle is your local Chicago Ground Transportation Service, serving Chicago to Wisconsin, Indiana, Michigan, Ohio and the rest of the world!",
-      hour: 130,
+      hour: 135,
       day: 1320,
-      airport: "220 - 650",
+      airport: "$195 All Included",
       seats: 10,
     },
-    {
-      id: 8,
-      title: "Sprinter Limo",
-      imageUrl: "/pngwing.com (3).png",
-      descreption:
-        "Executive Sprinter Limo vans for all your transportation needs. Our professional chauffeurs will greet you with warmth and make sure you arrive at your destination in style. ",
-      hour: 95,
-      day: 900,
-      airport: "115 - 550",
-      seats: 4,
-    },
+    // {
+    //   id: 8,
+    //   title: "Sprinter Limo",
+    //   imageUrl: "/pngwing.com (3).png",
+    //   descreption:
+    //     "Executive Sprinter Limo vans for all your transportation needs. Our professional chauffeurs will greet you with warmth and make sure you arrive at your destination in style. ",
+    //   hour: 330,
+    //   day: 1680,
+    //   airport: "N/A (Hourly Only)",
+    //   seats: 12,
+    // }
+
     {
       id: 9,
       title: "Ford Party Bus Limo",
       imageUrl: "/pngegg (6) (1).png",
       descreption:
         "With our large 24 to 56-passenger buses, there are no groups too large, or too small! From company team building events, out-of-town travel, airport transportation, music concerts, sporting events, and more.",
-      hour: 300,
+      hour: 330,
       day: 2880,
-      airport: "750-1500",
+      airport: "N/A (Hourly Only)",
       seats: 25,
     },
     {
@@ -117,9 +116,9 @@ const Fleet = () => {
       imageUrl: "/pngegg (6) (1).png",
       descreption:
         "Generously accommodates up to 45 passengers with a separate luggage compartment. Our Chicago bus service vehicles are equipped with TV(s), CD/DVD, and AM/FM stereo for your listening enjoyment and relaxation.",
-      hour: 278,
+      hour: 225,
       day: 2400,
-      airport: "Start 450",
+      airport: "$650 All Included",
       seats: 45,
     },
   ];
@@ -172,7 +171,6 @@ const Fleet = () => {
                   id={car.id}
                   title={car.title}
                   imageUrl={car.imageUrl}
-                  day={car.day}
                   hour={car.hour}
                   airport={car.airport}
                   seats={car.seats}
