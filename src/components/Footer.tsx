@@ -47,6 +47,13 @@ const Footer = () => {
                   height={50}
                   className="hover:opacity-90 transition-opacity duration-300"
                 />
+                <Image
+                  src="/choose-chicago.svg"
+                  alt="Choose Chicago"
+                  width={90}
+                  height={50}
+                  className="hover:opacity-90 transition-opacity duration-300"
+                />
               </div>
             </div>
           </div>
