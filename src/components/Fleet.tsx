@@ -38,9 +38,9 @@ const Fleet = () => {
       imageUrl: "/car_01-768x510-removebg-preview.png",
       descreption:
         "tinted windows, a great sound system, and room for all your luggage,",
-      hour: 95,
+      hour: 200,
       day: 2400,
-      airport: "$125 All Included",
+      airport: "$300 All Included",
       seats: 3,
     },
     {

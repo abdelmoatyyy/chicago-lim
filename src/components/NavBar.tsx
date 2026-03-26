@@ -59,7 +59,7 @@ export function NavBar() {
   React.useEffect(() => {
     window.addEventListener(
       "resize",
-      () => window.innerWidth >= 960 && setOpen(false)
+      () => window.innerWidth >= 960 && setOpen(false),
     );
   }, []);
 
@@ -129,7 +129,7 @@ export function NavBar() {
         <Collapse open={open}>
           <div className="mt-2 flex flex-col items-center text-center rounded-xl bg-black/70 py-2 px-5">
             <NavList />
-            <Link href="/book-now">
+            <Link href="https://book.mylimobiz.com/v4/(S(xbwpckbavhrcpfqd2ki2bnrt))/chicagotrans">
               <Button
                 className="mb-2"
                 fullWidth

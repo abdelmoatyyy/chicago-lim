@@ -147,7 +147,7 @@ const ContactUs = () => {
 
               {/* Book Now */}
               <Link
-                href="mailto:book@ctlcss.com"
+                href="mailto:info@chicagotranslimo.com"
                 className="group flex flex-col items-center justify-center rounded-lg backdrop-blur-sm bg-black/30 p-8 shadow-xl border border-gray-800 transition-all duration-300 hover:-translate-y-1 hover:bg-black/40"
               >
                 <div className="mb-4 rounded-full bg-gradient-to-br from-[#FFD700] to-amber-500 p-4 text-white shadow-lg shadow-amber-500/30 group-hover:scale-110 transition-transform duration-300">
@@ -158,7 +158,7 @@ const ContactUs = () => {
                   Send booking request
                 </p>
                 <p className="mt-2 text-[#FFD700] font-medium">
-                  book@ctlcss.com
+                  info@chicagotranslimo.com
                 </p>
               </Link>
             </div>
