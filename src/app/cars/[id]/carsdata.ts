@@ -293,7 +293,7 @@ const carData: Record<any, any> = {
   11: {
     name: "Moto Coach",
     images: ["/bus44-removebg-preview.png", "/bigbus1.jpg", "/bigbus2.jpg"],
-    perHourRate: "$300 / Hour ( Hrs Min)",
+    perHourRate: "$300 / Hour (3 Hrs Min)",
     perDayRate: "$2400 / Day",
     airportTransfer: "$650 All Included",
     passengers: "52 Passengers",
