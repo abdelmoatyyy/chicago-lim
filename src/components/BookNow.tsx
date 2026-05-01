@@ -1,37 +1,15 @@
 "use client";
 import React, { useEffect } from "react";
 import Image from "next/image";
+import { scanMylimobizWidgets } from "@/lib/mylimobiz-widget";
 
 const BookNow = () => {
   useEffect(() => {
-    const link = document.getElementById(
-      "homepage-booking-widget-link"
-    ) as HTMLAnchorElement | null;
+    const frame = requestAnimationFrame(() => {
+      scanMylimobizWidgets();
+    });
 
-    if (!link) {
-      return;
-    }
-
-    const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-
-    if (isSafari) {
-      link.href = "https://book.mylimobiz.com/v4/chicagotrans";
-      link.textContent = "Book Now (Safari)";
-      link.removeAttribute("data-ores-widget");
-      link.removeAttribute("data-ores-alias");
-      link.removeAttribute("data-redirect-url");
-      return;
-    }
-
-    const script = document.createElement("script");
-    script.src = `https://book.mylimobiz.com/v4/widgets/widget-loader.js?init=${Date.now()}`;
-    script.async = true;
-    script.setAttribute("data-mylimobiz-loader", "homepage-booknow");
-    document.body.appendChild(script);
-
-    return () => {
-      script.remove();
-    };
+    return () => cancelAnimationFrame(frame);
   }, []);
 
   return (
@@ -121,8 +99,10 @@ const BookNow = () => {
               data-ores-widget="quickres"
               data-ores-alias="chicagotrans"
               data-redirect-url="https://book.mylimobiz.com/v4/chicagotrans"
-              className="block w-full h-full min-h-[400px]"
-            ></a>
+              className="flex min-h-[400px] h-full w-full flex-col items-center justify-center text-center text-sm text-gray-400"
+            >
+              Loading reservation form…
+            </a>
           </div>
         </div>
       </div>

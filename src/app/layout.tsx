@@ -220,32 +220,39 @@ export default function RootLayout({
           strategy="afterInteractive"
         />
 
-        {/* Safari-Specific Fixes */}
+        {/* Safari-specific fixes (run once DOM is ready; afterInteractive may be late for DOMContentLoaded) */}
         <Script id="safari-fixes" strategy="afterInteractive">
           {`
-            document.addEventListener("DOMContentLoaded", function () {
-              const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-              if (!isSafari) return;
+            function applySafariBookingFallback(link) {
+              if (!link) return;
+              link.href = "https://book.mylimobiz.com/v4/chicagotrans";
+              link.textContent = "Book Now (Safari)";
+              link.removeAttribute("data-ores-widget");
+              link.removeAttribute("data-ores-alias");
+              link.removeAttribute("data-redirect-url");
+            }
 
-              // Fix for widget link
-              const widgetLink = document.getElementById("chicagotrans-widget-link");
-              if (widgetLink) {
-                widgetLink.href = "https://book.mylimobiz.com/v4/chicagotrans";
-                widgetLink.textContent = "Book Now (Safari)";
-                widgetLink.removeAttribute("data-ores-widget");
-                widgetLink.removeAttribute("data-ores-alias");
-              }
+            function isAppleSafari() {
+              var ua = navigator.userAgent;
+              if (!/safari/i.test(ua)) return false;
+              if (/android/i.test(ua)) return false;
+              if (new RegExp("chrom(?:e|ium)|crios|fxios|edg/|opr/|opios/", "i").test(ua)) return false;
+              return true;
+            }
 
-              // Fix for booking link
-              const bookingLink = document.getElementById("chicagotrans-link");
-              if (bookingLink) {
-                bookingLink.href = "https://book.mylimobiz.com/v4/chicagotrans";
-                bookingLink.textContent = "Book Now (Safari)";
-                bookingLink.removeAttribute("data-ores-widget");
-                bookingLink.removeAttribute("data-ores-alias");
-                bookingLink.removeAttribute("data-redirect-url");
-              }
-            });
+            function runSafariFixes() {
+              if (!isAppleSafari()) return;
+
+              applySafariBookingFallback(document.getElementById("chicagotrans-widget-link"));
+              applySafariBookingFallback(document.getElementById("chicagotrans-link"));
+              applySafariBookingFallback(document.getElementById("homepage-booking-widget-link"));
+            }
+
+            if (document.readyState === "loading") {
+              document.addEventListener("DOMContentLoaded", runSafariFixes);
+            } else {
+              runSafariFixes();
+            }
           `}
         </Script>
       </body>

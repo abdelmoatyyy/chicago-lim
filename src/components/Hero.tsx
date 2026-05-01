@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { scanMylimobizWidgets } from "@/lib/mylimobiz-widget";
 
 export default function Hero() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -8,34 +9,11 @@ export default function Hero() {
   useEffect(() => {
     setIsLoaded(true);
 
-    const link = document.getElementById(
-      "chicagotrans-link"
-    ) as HTMLAnchorElement | null;
+    const frame = requestAnimationFrame(() => {
+      scanMylimobizWidgets();
+    });
 
-    if (!link) {
-      return;
-    }
-
-    const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-
-    if (isSafari) {
-      link.href = "https://book.mylimobiz.com/v4/chicagotrans";
-      link.textContent = "Book Now (Safari)";
-      link.removeAttribute("data-ores-widget");
-      link.removeAttribute("data-ores-alias");
-      link.removeAttribute("data-redirect-url");
-      return;
-    }
-
-    const script = document.createElement("script");
-    script.src = `https://book.mylimobiz.com/v4/widgets/widget-loader.js?init=${Date.now()}`;
-    script.async = true;
-    script.setAttribute("data-mylimobiz-loader", "hero");
-    document.body.appendChild(script);
-
-    return () => {
-      script.remove();
-    };
+    return () => cancelAnimationFrame(frame);
   }, []);
 
   return (
@@ -130,8 +108,10 @@ export default function Hero() {
                 data-redirect-url="https://www.chicagotranslimo.com/book-now"
                 rel="noopener noreferrer"
                 id="chicagotrans-link"
-                className="block w-full min-h-[300px]"
-              ></a>
+                className="flex min-h-[300px] w-full flex-col items-center justify-center text-center text-sm text-white/60"
+              >
+                Loading reservation form…
+              </a>
             </div>
           </div>
         </div>
