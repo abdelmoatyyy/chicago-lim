@@ -100,10 +100,10 @@ const Fleet = () => {
     },
     {
       id: 10,
-      title: "45 Passenger Bus",
+      title: "36 Passenger Bus",
       imageUrl: "/busss.png",
       description:
-        "Generously accommodates up to 45 passengers with a separate luggage compartment. Our Chicago bus service vehicles are equipped with TV(s), CD/DVD, and AM/FM stereo for your listening enjoyment and relaxation.",
+        "Generously accommodates up to 36 passengers with a separate luggage compartment. Our Chicago bus service vehicles are equipped with TV(s), CD/DVD, and AM/FM stereo for your listening enjoyment and relaxation.",
       hour: 225,
       day: 2400,
       airport: "$650 All Included",
