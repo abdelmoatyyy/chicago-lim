@@ -10,64 +10,74 @@ import {
 } from "@material-tailwind/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 interface NavItemPropsType {
   label: string;
+  href: string;
 }
 
-function NavItem({ label }: NavItemPropsType) {
+function NavItem({ label, href }: NavItemPropsType) {
   return (
-    <Typography
-      as="li"
-      color="white"
-      className="p-1 font-medium text-white hover:text-amber-500"
-      placeholder={undefined}
-      onPointerEnterCapture={undefined}
-      onPointerLeaveCapture={undefined}
-    >
-      {label}
-    </Typography>
+    <li>
+      <Link href={href} className="block py-2 lg:inline lg:py-0">
+        <Typography
+          as="span"
+          color="white"
+          className="font-medium text-white hover:text-amber-500"
+          placeholder={undefined}
+          onPointerEnterCapture={undefined}
+          onPointerLeaveCapture={undefined}
+        >
+          {label}
+        </Typography>
+      </Link>
+    </li>
   );
 }
 
 function NavList() {
   return (
-    <ul className="mb-4 mt-2 flex flex-col gap-3 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-8 ">
-      <Link href="/#home">
-        <NavItem label="Home" />
-      </Link>
-      <Link href="/about-us">
-        <NavItem label="About Us" />{" "}
-      </Link>
-      <Link href="/#services">
-        <NavItem label="Services" />
-      </Link>
-      <Link href="/#fleet">
-        <NavItem label="Our Fleet" />
-      </Link>
-      <Link href="/#contact-us">
-        <NavItem label="Contact Us" />
-      </Link>
-      <Link href="/terms">
-        <NavItem label="Privacy Policy" />
-      </Link>
-      <Link href="/events-terms">
-        <NavItem label="Events Terms" />
-      </Link>
+    <ul className="mb-4 mt-2 flex list-none flex-col gap-1 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-8 lg:gap-y-0">
+      <NavItem label="Home" href="/#home" />
+      <NavItem label="About Us" href="/about-us" />
+      <NavItem label="Services" href="/#services" />
+      <NavItem label="Our Fleet" href="/#fleet" />
+      <NavItem label="Contact Us" href="/#contact-us" />
+      <NavItem label="Privacy Policy" href="/terms" />
+      <NavItem label="Events Terms" href="/events-terms" />
     </ul>
   );
 }
 
+const LG_BREAKPOINT_PX = 1024;
+const MOBILE_NAV_ID = "mobile-primary-nav";
+
 export function NavBar() {
+  const pathname = usePathname();
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen((cur) => !cur);
 
   React.useEffect(() => {
-    window.addEventListener(
-      "resize",
-      () => window.innerWidth >= 960 && setOpen(false),
-    );
+    setOpen(false);
+  }, [pathname]);
+
+  React.useEffect(() => {
+    const onResize = () => {
+      if (window.innerWidth >= LG_BREAKPOINT_PX) setOpen(false);
+    };
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
   }, []);
+
+  React.useEffect(() => {
+    if (!open) return;
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = prev;
+    };
+  }, [open]);
 
   return (
     <div className="absolute top-0 left-0 w-full">
@@ -93,8 +103,8 @@ export function NavBar() {
             <NavList />
           </div>
 
-          <div className="flex items-center  md:block hidden">
-            <div className="flex gap-5 justify-center items-center">
+          <div className="hidden md:flex md:items-center">
+            <div className="flex items-center justify-center gap-5">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -109,18 +119,20 @@ export function NavBar() {
               </svg>
               <div>
                 <h2 className="">Call to book an order:</h2>
-                <Link href="tel:(312)-645-0505">
+                <Link href="tel:+13126450505">
                   <p className="hover:text-[#A57D02]">1-(312)-645-0505</p>
                 </Link>
               </div>
             </div>
           </div>
           <IconButton
-            size="sm"
             variant="text"
             color="white"
             onClick={handleOpen}
-            className="ml-auto inline-block text-white lg:hidden"
+            aria-expanded={open}
+            aria-controls={MOBILE_NAV_ID}
+            aria-label={open ? "Close menu" : "Open menu"}
+            className="ml-auto inline-flex min-h-11 min-w-11 items-center justify-center text-white lg:hidden"
             placeholder={undefined}
             onPointerEnterCapture={undefined}
             onPointerLeaveCapture={undefined}
@@ -133,9 +145,24 @@ export function NavBar() {
           </IconButton>
         </div>
         <Collapse open={open}>
-          <div className="mt-2 flex flex-col items-center text-center rounded-xl bg-black/70 py-2 px-5">
+          <div
+            id={MOBILE_NAV_ID}
+            className="mt-2 flex max-h-[min(70vh,calc(100dvh-5rem))] flex-col items-center overflow-y-auto rounded-xl bg-black/70 px-5 py-3 text-center"
+          >
             <NavList />
-            <Link href="https://book.mylimobiz.com/v4/(S(xbwpckbavhrcpfqd2ki2bnrt))/chicagotrans">
+            <div className="mb-3 flex w-full max-w-xs flex-col gap-1 border-t border-white/10 pt-3 text-sm text-white/90 lg:hidden">
+              <p className="text-white/70">Call to book</p>
+              <Link
+                href="tel:+13126450505"
+                className="text-lg font-semibold text-[#A57D02] hover:text-amber-400"
+              >
+                1-(312)-645-0505
+              </Link>
+            </div>
+            <Link
+              href="https://book.mylimobiz.com/v4/(S(xbwpckbavhrcpfqd2ki2bnrt))/chicagotrans"
+              className="w-full max-w-xs"
+            >
               <Button
                 className="mb-2"
                 fullWidth
