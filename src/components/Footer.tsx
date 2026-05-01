@@ -32,28 +32,49 @@ const Footer = () => {
                 Luxury cars combine elegance and comfort, offering an unmatched
                 driving experience for every journey.
               </p>
-              <div className="flex gap-6 mt-8">
-                <Image
-                  src="/foter.png"
-                  alt="footer"
-                  width={90}
-                  height={50}
-                  className="hover:opacity-90 transition-opacity duration-300"
-                />
-                <Image
-                  src="/foter2.png"
-                  alt="footer"
-                  width={90}
-                  height={50}
-                  className="hover:opacity-90 transition-opacity duration-300"
-                />
-                <Image
-                  src="/choose-chicago.svg"
-                  alt="Choose Chicago"
-                  width={90}
-                  height={50}
-                  className="hover:opacity-90 transition-opacity duration-300"
-                />
+              <div className="flex items-center gap-6 mt-8">
+                <Link
+                  href="https://www.illba.org/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Illinois Limousine & Bus Association"
+                  className="relative w-[90px] h-[50px] flex-shrink-0"
+                >
+                  <Image
+                    src="/foter.png"
+                    alt="Illinois Limousine & Bus Association"
+                    fill
+                    className="object-contain hover:opacity-75 transition-opacity duration-300"
+                  />
+                </Link>
+                <Link
+                  href="https://www.limo.org/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="National Limousine Association"
+                  className="relative w-[90px] h-[50px] flex-shrink-0"
+                >
+                  <Image
+                    src="/foter2.png"
+                    alt="National Limousine Association"
+                    fill
+                    className="object-contain hover:opacity-75 transition-opacity duration-300"
+                  />
+                </Link>
+                <Link
+                  href="https://www.choosechicago.com/listing/chicagotrans-limousine-shuttle-service-2/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Choose Chicago listing"
+                  className="relative w-[90px] h-[50px] flex-shrink-0"
+                >
+                  <Image
+                    src="/choose-chicago.svg"
+                    alt="Choose Chicago"
+                    fill
+                    className="object-contain hover:opacity-75 transition-opacity duration-300"
+                  />
+                </Link>
               </div>
             </div>
           </div>
@@ -209,7 +230,7 @@ const Footer = () => {
             </li>
             <li>
               <Link
-                href="/"
+                href="/terms"
                 className="text-sm text-gray-400 transition-colors duration-300 hover:text-blue-400 hover:underline"
               >
                 Terms &amp; Conditions
