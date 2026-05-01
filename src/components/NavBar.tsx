@@ -6,7 +6,6 @@ import {
   Collapse,
   Typography,
   Button,
-  IconButton,
 } from "@material-tailwind/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
@@ -15,12 +14,17 @@ import { usePathname } from "next/navigation";
 interface NavItemPropsType {
   label: string;
   href: string;
+  onNavigate?: () => void;
 }
 
-function NavItem({ label, href }: NavItemPropsType) {
+function NavItem({ label, href, onNavigate }: NavItemPropsType) {
   return (
     <li>
-      <Link href={href} className="block py-2 lg:inline lg:py-0">
+      <Link
+        href={href}
+        className="block py-2 lg:inline lg:py-0"
+        onClick={() => onNavigate?.()}
+      >
         <Typography
           as="span"
           color="white"
@@ -36,16 +40,16 @@ function NavItem({ label, href }: NavItemPropsType) {
   );
 }
 
-function NavList() {
+function NavList({ onNavigate }: { onNavigate?: () => void }) {
   return (
     <ul className="mb-4 mt-2 flex list-none flex-col gap-1 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-8 lg:gap-y-0">
-      <NavItem label="Home" href="/#home" />
-      <NavItem label="About Us" href="/about-us" />
-      <NavItem label="Services" href="/#services" />
-      <NavItem label="Our Fleet" href="/#fleet" />
-      <NavItem label="Contact Us" href="/#contact-us" />
-      <NavItem label="Privacy Policy" href="/terms" />
-      <NavItem label="Events Terms" href="/events-terms" />
+      <NavItem label="Home" href="/#home" onNavigate={onNavigate} />
+      <NavItem label="About Us" href="/about-us" onNavigate={onNavigate} />
+      <NavItem label="Services" href="/#services" onNavigate={onNavigate} />
+      <NavItem label="Our Fleet" href="/#fleet" onNavigate={onNavigate} />
+      <NavItem label="Contact Us" href="/#contact-us" onNavigate={onNavigate} />
+      <NavItem label="Privacy Policy" href="/terms" onNavigate={onNavigate} />
+      <NavItem label="Events Terms" href="/events-terms" onNavigate={onNavigate} />
     </ul>
   );
 }
@@ -57,6 +61,7 @@ export function NavBar() {
   const pathname = usePathname();
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen((cur) => !cur);
+  const closeMenu = React.useCallback(() => setOpen(false), []);
 
   React.useEffect(() => {
     setOpen(false);
@@ -80,18 +85,21 @@ export function NavBar() {
   }, [open]);
 
   return (
-    <div className="absolute top-0 left-0 w-full">
-      <div className="absolute inset-0 z-10 bg-black opacity-30 backdrop-blur" />
+    <header className="fixed inset-x-0 top-0 z-[100] isolate w-full pt-[env(safe-area-inset-top,0px)]">
+      <div
+        className="pointer-events-none absolute inset-0 bg-black/30 backdrop-blur-md"
+        aria-hidden
+      />
       <Navbar
         color="transparent"
         fullWidth
-        className="relative top-0 z-20 shadow-none py-0 overflow-hidden"
+        className="relative z-10 overflow-visible border-0 bg-transparent py-2 shadow-none lg:py-0"
         placeholder={undefined}
         onPointerEnterCapture={undefined}
         onPointerLeaveCapture={undefined}
       >
-        <div className="container mx-auto flex items-center justify-between text-white">
-          <Link href="/">
+        <div className="container mx-auto flex items-center justify-between gap-3 text-white">
+          <Link href="/" onClick={() => open && closeMenu()}>
             <Image
               src="/chicagotransLOGO.png"
               alt="logo"
@@ -125,36 +133,33 @@ export function NavBar() {
               </div>
             </div>
           </div>
-          <IconButton
-            variant="text"
-            color="white"
+          <button
+            type="button"
             onClick={handleOpen}
             aria-expanded={open}
             aria-controls={MOBILE_NAV_ID}
             aria-label={open ? "Close menu" : "Open menu"}
-            className="ml-auto inline-flex min-h-11 min-w-11 items-center justify-center text-white lg:hidden"
-            placeholder={undefined}
-            onPointerEnterCapture={undefined}
-            onPointerLeaveCapture={undefined}
+            className="ml-auto inline-flex h-12 min-h-[48px] w-12 min-w-[48px] shrink-0 touch-manipulation items-center justify-center rounded-lg text-white transition-colors hover:bg-white/10 active:bg-white/15 lg:hidden"
           >
             {open ? (
-              <XMarkIcon className="h-6 w-6" strokeWidth={2} />
+              <XMarkIcon className="h-7 w-7 shrink-0" strokeWidth={2} />
             ) : (
-              <Bars3Icon className="h-6 w-6" strokeWidth={2} />
+              <Bars3Icon className="h-7 w-7 shrink-0" strokeWidth={2} />
             )}
-          </IconButton>
+          </button>
         </div>
         <Collapse open={open}>
           <div
             id={MOBILE_NAV_ID}
-            className="mt-2 flex max-h-[min(70vh,calc(100dvh-5rem))] flex-col items-center overflow-y-auto rounded-xl bg-black/70 px-5 py-3 text-center"
+            className="relative z-[110] mt-2 flex max-h-[min(70vh,calc(100dvh-8rem))] flex-col items-center overflow-y-auto rounded-xl border border-white/10 bg-black/85 px-5 py-3 text-center shadow-lg backdrop-blur-md supports-[backdrop-filter]:bg-black/75"
           >
-            <NavList />
+            <NavList onNavigate={closeMenu} />
             <div className="mb-3 flex w-full max-w-xs flex-col gap-1 border-t border-white/10 pt-3 text-sm text-white/90 lg:hidden">
               <p className="text-white/70">Call to book</p>
               <Link
                 href="tel:+13126450505"
                 className="text-lg font-semibold text-[#A57D02] hover:text-amber-400"
+                onClick={closeMenu}
               >
                 1-(312)-645-0505
               </Link>
@@ -162,12 +167,14 @@ export function NavBar() {
             <Link
               href="https://book.mylimobiz.com/v4/(S(xbwpckbavhrcpfqd2ki2bnrt))/chicagotrans"
               className="w-full max-w-xs"
+              onClick={closeMenu}
             >
               <Button
                 className="mb-2"
                 fullWidth
                 color="amber"
                 variant="gradient"
+                onClick={closeMenu}
                 placeholder={undefined}
                 onPointerEnterCapture={undefined}
                 onPointerLeaveCapture={undefined}
@@ -178,7 +185,7 @@ export function NavBar() {
           </div>
         </Collapse>
       </Navbar>
-    </div>
+    </header>
   );
 }
 
