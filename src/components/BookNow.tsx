@@ -1,11 +1,39 @@
 "use client";
-import { Button } from "@material-tailwind/react";
-import Link from "next/link";
-import React from "react";
-import { Apple, AppleIcon } from "lucide-react";
+import React, { useEffect } from "react";
 import Image from "next/image";
 
 const BookNow = () => {
+  useEffect(() => {
+    const link = document.getElementById(
+      "homepage-booking-widget-link"
+    ) as HTMLAnchorElement | null;
+
+    if (!link) {
+      return;
+    }
+
+    const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+
+    if (isSafari) {
+      link.href = "https://book.mylimobiz.com/v4/chicagotrans";
+      link.textContent = "Book Now (Safari)";
+      link.removeAttribute("data-ores-widget");
+      link.removeAttribute("data-ores-alias");
+      link.removeAttribute("data-redirect-url");
+      return;
+    }
+
+    const script = document.createElement("script");
+    script.src = `https://book.mylimobiz.com/v4/widgets/widget-loader.js?init=${Date.now()}`;
+    script.async = true;
+    script.setAttribute("data-mylimobiz-loader", "homepage-booknow");
+    document.body.appendChild(script);
+
+    return () => {
+      script.remove();
+    };
+  }, []);
+
   return (
     <div
       id="book-now"
@@ -67,7 +95,7 @@ const BookNow = () => {
             </div>
 
             <div className="mt-10 w-full">
-              <Link
+              <a
                 href="https://book.mylimobiz.com/v4/(S(iyhgctydwk54dkz0us3bwvlp))/chicagotrans"
                 className="inline-block w-full py-4 px-6 text-center text-black font-bold bg-gradient-to-r from-[#FFD700] to-[#FFC800] rounded-lg shadow-lg hover:shadow-xl hover:from-[#FFC800] hover:to-[#FFD700] transition-all duration-300"
               >
@@ -82,18 +110,19 @@ const BookNow = () => {
                     height={24}
                   />
                 </div>
-              </Link>
+              </a>
             </div>
           </div>
 
           <div className="md:w-1/2 w-full mt-8 md:mt-0 bg-black/30 backdrop-blur-sm p-6 rounded-lg border border-gray-700">
-            <Link
+            <a
+              id="homepage-booking-widget-link"
               href="https://book.mylimobiz.com/v4/chicagotrans"
               data-ores-widget="quickres"
               data-ores-alias="chicagotrans"
               data-redirect-url="https://book.mylimobiz.com/v4/chicagotrans"
               className="block w-full h-full min-h-[400px]"
-            ></Link>
+            ></a>
           </div>
         </div>
       </div>

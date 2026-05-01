@@ -65,7 +65,7 @@ const carData: Record<any, any> = {
   3: {
     name: "Mercedes Premier Sedan",
     images: [
-      "/car_01-768x510-removebg-preview.png",
+      "/sclass-removebg-preview.png",
       "/sedan31.webp",
       "/sedan32.jpg",
     ],
@@ -157,8 +157,8 @@ const carData: Record<any, any> = {
     name: "Sprinter Executive Van",
     images: [
       "/pngegg (5).png",
-      "/sprinter-slide-1.avif",
-      "/sprinter-slide-2.avif",
+      "/bus33.jpg",
+      "/bus55.jpg",
     ],
     perHourRate: "$145 / Hour (2 Hrs Min)",
     perDayRate: "$1920 / Day",
@@ -183,8 +183,8 @@ const carData: Record<any, any> = {
     name: "Transit Van",
     images: [
       "/pngwing.com (1).png",
-      "/transit-slide-1.jpg",
-      "/transit-slide-2.jpg",
+      "/bus33.jpg",
+      "/bus22.jpg",
     ],
     perHourRate: "$135 / Hour (2 Hrs Min)",
     perDayRate: "$1320 / Day",
@@ -239,7 +239,7 @@ const carData: Record<any, any> = {
   9: {
     name: "Ford Party Bus Limo",
     images: [
-      "/pngegg (6) (1).png",
+      "/busss.png",
       "/ford-bus-slide-1.jpg",
       "/ford-bus-slide-2.jpg",
     ],
@@ -270,12 +270,12 @@ const carData: Record<any, any> = {
   },
 
   10: {
-    name: "45 Passenger Bus",
-    images: ["/pngegg (6) (1).png", "/bus21.webp", "/bus22.webp"],
-    perHourRate: "$225 / Hour (4 Hrs Min)",
+    name: "36 Passenger Bus",
+    images: ["/busss.png", "/bus11.jpg", "/bus55.jpg"],
+    perHourRate: "$250 / Hour ( Hrs Min)",
     perDayRate: "$2400 / Day",
     airportTransfer: "$650 All Included",
-    passengers: "45 Passengers",
+    passengers: "36 Passengers",
     interior: "Leather Seats",
     features: ["WIFI", "TV", "Soft Drinks"],
     services: [
@@ -288,7 +288,28 @@ const carData: Record<any, any> = {
       "Point to Point",
     ],
     overview:
-      "The 45 Passenger Bus offers comfort and convenience for large groups, equipped with modern amenities for a great journey.",
+      "The 36 Passenger Bus offers comfort and convenience for large groups, equipped with modern amenities for a great journey.",
+  },
+  11: {
+    name: "Moto Coach",
+    images: ["/bus44-removebg-preview.png", "/bus11.jpg", "/bus55.jpg"],
+    perHourRate: "$300 / Hour ( Hrs Min)",
+    perDayRate: "$2400 / Day",
+    airportTransfer: "$650 All Included",
+    passengers: "52 Passengers",
+    interior: "Leather Seats",
+    features: ["WIFI", "TV", "Soft Drinks"],
+    services: [
+      "Airport Transfer",
+      "As Directed",
+      "Dedicated Chauffeur Service",
+      "Meet & Greet",
+      "Nightlife Service",
+      "Interstate Transfer",
+      "Point to Point",
+    ],
+    overview:
+      "The 52 Passenger Bus offers comfort and convenience for large groups, equipped with modern amenities for a great journey.",
   },
 };
 

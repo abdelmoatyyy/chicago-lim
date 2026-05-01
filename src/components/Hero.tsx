@@ -1,33 +1,41 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Link from "next/link";
-import Script from "next/script";
 
 export default function Hero() {
-  const [formData, setFormData] = useState({
-    name: "",
-    phone: "",
-    pickup: "",
-    dropoff: "",
-    date: "",
-    time: "",
-  });
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log("Reservation submitted:", formData);
-  };
-
-  // Animation on load
   const [isLoaded, setIsLoaded] = useState(false);
+
   useEffect(() => {
     setIsLoaded(true);
+
+    const link = document.getElementById(
+      "chicagotrans-link"
+    ) as HTMLAnchorElement | null;
+
+    if (!link) {
+      return;
+    }
+
+    const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+
+    if (isSafari) {
+      link.href = "https://book.mylimobiz.com/v4/chicagotrans";
+      link.textContent = "Book Now (Safari)";
+      link.removeAttribute("data-ores-widget");
+      link.removeAttribute("data-ores-alias");
+      link.removeAttribute("data-redirect-url");
+      return;
+    }
+
+    const script = document.createElement("script");
+    script.src = `https://book.mylimobiz.com/v4/widgets/widget-loader.js?init=${Date.now()}`;
+    script.async = true;
+    script.setAttribute("data-mylimobiz-loader", "hero");
+    document.body.appendChild(script);
+
+    return () => {
+      script.remove();
+    };
   }, []);
 
   return (
@@ -129,27 +137,6 @@ export default function Hero() {
         </div>
       </div>
 
-      <Script id="safari-booking-fix" strategy="afterInteractive">
-        {`
-          document.addEventListener("DOMContentLoaded", function () {
-            var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-            if (isSafari) {
-              var link = document.getElementById("chicagotrans-link");
-              if (link) {
-                link.href = "https://book.mylimobiz.com/v4/chicagotrans";
-                link.textContent = "Book Now (Safari)";
-                link.removeAttribute("data-ores-widget");
-                link.removeAttribute("data-ores-alias");
-                link.removeAttribute("data-redirect-url");
-              }
-            }
-          });
-        `}
-      </Script>
-      <Script
-        src="https://book.mylimobiz.com/v4/widgets/widget-loader.js"
-        strategy="afterInteractive"
-      />
     </section>
   );
 }

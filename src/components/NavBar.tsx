@@ -48,6 +48,12 @@ function NavList() {
       <Link href="/#contact-us">
         <NavItem label="Contact Us" />
       </Link>
+      <Link href="/terms">
+        <NavItem label="Privacy Policy" />
+      </Link>
+      <Link href="/events-terms">
+        <NavItem label="Events Terms" />
+      </Link>
     </ul>
   );
 }

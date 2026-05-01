@@ -35,7 +35,7 @@ const Fleet = () => {
     {
       id: 3,
       title: "Mercedes Premier Sedan",
-      imageUrl: "/car_01-768x510-removebg-preview.png",
+      imageUrl: "/sclass-removebg-preview.png",
       description:
         "Tinted windows, a great sound system, and room for all your luggage.",
       hour: 200,
@@ -90,7 +90,7 @@ const Fleet = () => {
     {
       id: 9,
       title: "Ford Party Bus Limo",
-      imageUrl: "/pngegg (6) (1).png",
+      imageUrl: "/busss.png",
       description:
         "With our large 24 to 56-passenger buses, there are no groups too large, or too small! From company team building events, out-of-town travel, airport transportation, music concerts, sporting events, and more.",
       hour: 330,
@@ -101,13 +101,24 @@ const Fleet = () => {
     {
       id: 10,
       title: "45 Passenger Bus",
-      imageUrl: "/pngegg (6) (1).png",
+      imageUrl: "/busss.png",
       description:
         "Generously accommodates up to 45 passengers with a separate luggage compartment. Our Chicago bus service vehicles are equipped with TV(s), CD/DVD, and AM/FM stereo for your listening enjoyment and relaxation.",
       hour: 225,
       day: 2400,
       airport: "$650 All Included",
       seats: 45,
+    },
+    {
+      id: 11,
+      title: "Moto Coach",
+      imageUrl: "/bus44-removebg-preview.png",
+      description:
+        "Generously accommodates up to 52 passengers with a separate luggage compartment. Our Chicago bus service vehicles are equipped with TV(s), CD/DVD, and AM/FM stereo for your listening enjoyment and relaxation.",
+      hour: 300,
+      day: 2400,
+      airport: "N/A (Hourly Only)",
+      seats: 52,
     },
   ];
 

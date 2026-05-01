@@ -32,12 +32,13 @@ const CarCard = ({
       </div>
 
       {/* Car Image */}
-      <div className="relative w-full h-52 mb-5 rounded-lg overflow-hidden group">
+      <div className="relative w-full h-52 mb-5 rounded-lg overflow-hidden group ">
         <Image
           src={imageUrl}
           alt={title}
-          layout="fill"
-          objectFit="cover"
+          fill
+          className="object-contain object-center"
+          sizes="(max-width: 768px) 100vw, 320px"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       </div>

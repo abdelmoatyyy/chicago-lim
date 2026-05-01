@@ -23,7 +23,7 @@ export default function FleetCard({ title, imageUrl }: FleetCardProps) {
     >
       <CardHeader
         floated={false}
-        className="h-48 relative"
+        className="h-48 relative "
         placeholder=""
         onPointerEnterCapture={() => {}}
         onPointerLeaveCapture={() => {}}
@@ -31,7 +31,7 @@ export default function FleetCard({ title, imageUrl }: FleetCardProps) {
         <img
           src={imageUrl}
           alt="profile-picture"
-          className="h-full w-full object-cover"
+          className="h-full w-full object-contain object-center"
         />
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
       </CardHeader>

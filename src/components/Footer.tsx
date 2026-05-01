@@ -222,7 +222,7 @@ const Footer = () => {
             </li>
             <li>
               <Link
-                href="/"
+                href="/terms"
                 className="text-sm text-gray-400 transition-colors duration-300 hover:text-blue-400 hover:underline"
               >
                 Privacy Policy
@@ -230,10 +230,10 @@ const Footer = () => {
             </li>
             <li>
               <Link
-                href="/terms"
+                href="/events-terms"
                 className="text-sm text-gray-400 transition-colors duration-300 hover:text-blue-400 hover:underline"
               >
-                Terms &amp; Conditions
+                Events Terms
               </Link>
             </li>
           </ul>

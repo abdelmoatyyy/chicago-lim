@@ -50,11 +50,11 @@ export default function CarDetailsPage() {
           {/* Image Gallery Section */}
           <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 mb-12 z-20">
             <div className="md:col-span-8 z-20">
-              <div className="relative rounded-2xl overflow-hidden shadow-lg z-20">
+              <div className="relative rounded-2xl overflow-hidden shadow-lg z-20 ">
                 <img
                   src={activeImage}
                   alt={car.name}
-                  className="w-full h-64 sm:h-80 md:h-[500px] object-cover"
+                  className="w-full h-64 sm:h-80 md:h-[500px] object-contain object-center"
                 />
               </div>
               <div className="grid grid-cols-3 gap-2 sm:gap-4 mt-4 z-20">
@@ -66,7 +66,7 @@ export default function CarDetailsPage() {
                     <button
                       key={index}
                       onClick={() => setActiveImage(image)}
-                      className={`rounded-lg z-20 overflow-hidden transition-all ${
+                      className={`rounded-lg z-20 overflow-hidden transition-all  ${
                         activeImage === image
                           ? "ring-2 ring-[#CD9900]"
                           : "opacity-75 hover:opacity-100"
@@ -75,7 +75,7 @@ export default function CarDetailsPage() {
                       <img
                         src={image}
                         alt=""
-                        className="w-full h-16 sm:h-24 object-cover z-20"
+                        className="w-full h-16 sm:h-24 object-cover  z-20"
                       />
                     </button>
                   )
