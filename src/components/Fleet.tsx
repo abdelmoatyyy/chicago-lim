@@ -71,9 +71,9 @@ const Fleet = () => {
       imageUrl: "/pngegg (5).png",
       description:
         "Executive Sprinter Limo vans for all your transportation needs. Our professional chauffeurs will greet you with warmth and make sure you arrive at your destination in style.",
-      hour: 145,
+      hour: 165,
       day: 1920,
-      airport: "$225 All Included",
+      airport: "$330 All Included",
       seats: 10,
     },
     {
@@ -82,9 +82,9 @@ const Fleet = () => {
       imageUrl: "/pngwing.com (1).png",
       description:
         "ChicagoTrans Limousine and Shuttle is your local Chicago Ground Transportation Service, serving Chicago to Wisconsin, Indiana, Michigan, Ohio and the rest of the world!",
-      hour: 135,
+      hour: 145,
       day: 1320,
-      airport: "$195 All Included",
+      airport: "$275 All Included",
       seats: 10,
     },
     {
